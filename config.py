@@ -4,6 +4,9 @@ from pydantic_settings import BaseSettings
 from pathlib import Path
 import warnings
 from models import PowerEnum
+import dotenv
+
+dotenv.load_dotenv()
 
 
 class Configuration(BaseSettings):

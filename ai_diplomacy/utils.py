@@ -70,15 +70,16 @@ def assign_models_to_powers() -> Dict[str, str]:
     """
 
     # POWER MODELS
-    
+    # Using a simple, fast model for all powers for a "simple game"
+    default_model = "openrouter-openai/gpt-4o-mini"
     return {
-        "AUSTRIA": "o4-mini",
-        "ENGLAND": "o3",
-        "FRANCE": "gpt-5-reasoning-alpha-2025-07-19",
-        "GERMANY": "gpt-4.1",
-        "ITALY": "o4-mini",
-        "RUSSIA": "gpt-5-reasoning-alpha-2025-07-19",
-        "TURKEY": "o4-mini",
+        "AUSTRIA": default_model,
+        "ENGLAND": default_model,
+        "FRANCE": default_model,
+        "GERMANY": default_model,
+        "ITALY": default_model,
+        "RUSSIA": default_model,
+        "TURKEY": default_model,
     }
     
     # TEST MODELS
