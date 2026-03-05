@@ -62,7 +62,7 @@ class Lie:
 class GameAnalyzer:
     """Analyzes Diplomacy game data for key strategic moments"""
     
-    def __init__(self, results_folder: str, model_name: str = "openrouter-google/gemini-2.5-flash-preview"):
+    def __init__(self, results_folder: str, model_name: str = "openrouter-google/gemini-2.5-flash"):
         self.results_folder = Path(results_folder)
         self.game_data_path = self.results_folder / "lmvsgame.json"
         self.overview_path = self.results_folder / "overview.jsonl"
@@ -1281,7 +1281,7 @@ Create a single, cohesive narrative that captures the essence of the entire game
 async def main():
     parser = argparse.ArgumentParser(description="Analyze Diplomacy game for key strategic moments")
     parser.add_argument("results_folder", help="Path to the results folder containing lmvsgame.json and overview.jsonl")
-    parser.add_argument("--model", default="openrouter-google/gemini-2.5-flash-preview",
+    parser.add_argument("--model", default="openrouter-google/gemini-2.5-flash",
                         help="Model to use for analysis")
     parser.add_argument("--report", default=None,
                         help="Output path for markdown report (auto-generates timestamped name if not specified)")
