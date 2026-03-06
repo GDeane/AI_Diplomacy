@@ -297,6 +297,13 @@ def load_game_state(
                         submitted[pwr].append(order_str)
         ph_obj.submitted_orders_by_power = submitted
 
+    # Ensure power_model_map is set on the Game object for overview.jsonl
+    if power_model_map:
+        game.power_model_map = power_model_map
+    elif not game.power_model_map:
+        # Derive from agents' client model names
+        game.power_model_map = {p: a.client.model_name for p, a in agents.items()}
+
     return game, agents, game_history, run_config
 
 

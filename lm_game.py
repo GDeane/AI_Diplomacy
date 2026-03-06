@@ -332,6 +332,16 @@ async def main():
             f"(current phase {game.get_current_phase()})."
         )
 
+    # Write overview early so power_model_map is available even if the game crashes
+    overview_file_path = os.path.join(run_dir, "overview.jsonl")
+    with open(overview_file_path, "w") as overview_file:
+        overview_file.write(json.dumps(model_error_stats) + "\n")
+        overview_file.write(json.dumps(getattr(game, 'power_model_map', {})) + "\n")
+        cfg = vars(run_config).copy()
+        if "prompts_dir_map" in cfg and isinstance(cfg["prompts_dir_map"], dict):
+            cfg["prompts_dir_map"] = {p: str(path) for p, path in cfg["prompts_dir_map"].items()}
+        overview_file.write(json.dumps(cfg) + "\n")
+
     # --- 4. Main Game Loop ---
     while not game.is_game_done:
         phase_start = time.time()

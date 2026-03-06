@@ -72,7 +72,7 @@ def get_country_to_model_mapping(overview_df : pd.DataFrame, llm_responses_df : 
     country_to_model = overview_df.loc[1].reindex(COUNTRIES)
     if pd.isnull(country_to_model).any(): 
         if llm_responses_df is not None:
-            country_to_model = llm_responses_df.set_index("power")["model"].reindex(COUNTRIES)
+            country_to_model = llm_responses_df.drop_duplicates(subset="power").set_index("power")["model"].reindex(COUNTRIES)
     return country_to_model
 
 def process_game_inputs_in_zip(zip_path: Path, selected_game: str) -> Dict[str, Union[pd.DataFrame, dict]]:
