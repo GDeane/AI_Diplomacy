@@ -17,8 +17,8 @@ class Configuration(BaseSettings):
     COUNTRY_SPECIFIC_PROMPTS: bool = False
 
     # Default models for tasks
-    AI_DIPLOMACY_NARRATIVE_MODEL: str = "openrouter-google/gemini-2.5-flash-preview-05-20"
-    AI_DIPLOMACY_FORMATTER_MODEL: str = "openrouter-google/gemini-2.5-flash-preview-05-20"
+    AI_DIPLOMACY_NARRATIVE_MODEL: str = "gemini-2.5-flash"
+    AI_DIPLOMACY_FORMATTER_MODEL: str = "gemini-2.5-flash"
 
     # API Keys to be validated. Warns if they aren't present at startup, raises ValueError if you attempt to use them when they aren't present.
     DEEPSEEK_API_KEY: str | None = None
@@ -27,6 +27,10 @@ class Configuration(BaseSettings):
     GEMINI_API_KEY: str | None = None
     OPENROUTER_API_KEY: str | None = None
     TOGETHER_API_KEY: str | None = None
+
+    # Vertex AI settings (used when GEMINI_API_KEY is not set)
+    GCP_PROJECT_ID: str | None = None
+    GCP_LOCATION: str = "us-central1"
 
     def __init__(self, power_name: Optional[PowerEnum] = None, **kwargs):
         super().__init__(**kwargs)
@@ -53,6 +57,9 @@ class Configuration(BaseSettings):
         for key in api_keys:
             value = super().__getattribute__(key)
             if not value or (isinstance(value, str) and len(value) == 0):
+                # Don't warn about GEMINI_API_KEY if Vertex AI (GCP_PROJECT_ID) is configured
+                if key == "GEMINI_API_KEY" and super().__getattribute__("GCP_PROJECT_ID"):
+                    continue
                 warnings.warn(f"API key '{key}' is not set or is empty", UserWarning)
 
     def __getattribute__(self, name):

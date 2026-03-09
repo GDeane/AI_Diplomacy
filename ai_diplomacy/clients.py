@@ -16,7 +16,8 @@ import asyncio
 import requests
 from enum import StrEnum
 
-import google.generativeai as genai
+import google.generativeai as genai  # legacy SDK, kept for compatibility
+from google import genai as genai_new  # new unified SDK (supports Vertex AI + AI Studio)
 from together import AsyncTogether
 from together.error import APIError as TogetherAPIError  # For specific error handling
 
@@ -930,18 +931,34 @@ class ClaudeClient(BaseModelClient):
 
 class GeminiClient(BaseModelClient):
     """
-    For 'gemini-1.5-flash' or other Google Generative AI models.
+    For Gemini models via AI Studio (API key) or Vertex AI (Application Default Credentials).
+
+    Priority:
+      1. If GEMINI_API_KEY is set → uses AI Studio (google-genai SDK).
+      2. Else if GCP_PROJECT_ID is set → uses Vertex AI with ADC.
+      3. Otherwise → raises with a clear error message.
     """
 
     def __init__(self, model_name: str, prompts_dir: Optional[str] = None):
         super().__init__(model_name, prompts_dir=prompts_dir)
-        # Configure and get the model (corrected initialization)
+
         api_key = os.environ.get("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY environment variable is required")
-        genai.configure(api_key=api_key)
-        self.client = genai.GenerativeModel(model_name)
-        logger.debug(f"[{self.model_name}] Initialized Gemini client (genai.GenerativeModel)")
+        gcp_project = os.environ.get("GCP_PROJECT_ID")
+        gcp_location = os.environ.get("GCP_LOCATION", "us-central1")
+
+        if api_key:
+            self.client = genai_new.Client(api_key=api_key)
+            logger.info(f"[{self.model_name}] Initialized Gemini client via AI Studio (API key)")
+        elif gcp_project:
+            self.client = genai_new.Client(vertexai=True, project=gcp_project, location=gcp_location)
+            logger.info(f"[{self.model_name}] Initialized Gemini client via Vertex AI (project={gcp_project}, location={gcp_location})")
+        else:
+            raise ValueError(
+                "No Gemini credentials configured. Set one of the following:\n"
+                "  1. GEMINI_API_KEY  — for Google AI Studio\n"
+                "  2. GCP_PROJECT_ID  — for Vertex AI (requires ‘gcloud auth application-default login’)\n"
+                "See the CLAUDE.md or .env.example for details."
+            )
 
     async def generate_response(self, prompt: str, temperature: float = 0.0, inject_random_seed: bool = True) -> str:
         system_prompt_content = self.system_prompt
@@ -952,10 +969,10 @@ class GeminiClient(BaseModelClient):
         full_prompt = system_prompt_content + prompt + "\n\nPROVIDE YOUR RESPONSE BELOW:"
 
         try:
-            generation_config = genai.types.GenerationConfig(temperature=temperature, max_output_tokens=self.max_tokens)
-            response = await self.client.generate_content_async(
+            response = await self.client.aio.models.generate_content(
+                model=self.model_name,
                 contents=full_prompt,
-                generation_config=generation_config,
+                config=genai_new.types.GenerateContentConfig(temperature=temperature, max_output_tokens=self.max_tokens),
             )
 
             if not response or not response.text:

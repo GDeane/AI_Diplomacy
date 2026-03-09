@@ -71,7 +71,7 @@ def assign_models_to_powers() -> Dict[str, str]:
 
     # POWER MODELS
     # Using a simple, fast model for all powers for a "simple game"
-    default_model = "gemini-3-flash-preview"
+    default_model = "gemini-2.5-flash"
     return {
         "AUSTRIA": default_model,
         "ENGLAND": default_model,
