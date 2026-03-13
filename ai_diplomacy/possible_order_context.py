@@ -476,6 +476,8 @@ from typing import Tuple, List, Dict, Optional, Any
 
 # ── order-syntax matchers ─────────────────────────────────────────────────
 _SIMPLE_MOVE_RE = re.compile(r"^[AF] [A-Z]{3}(?:/[A-Z]{2})? - [A-Z]{3}(?:/[A-Z]{2})?$")
+_CONVOY_MOVE_RE = re.compile(r"^A [A-Z]{3}(?:/[A-Z]{2})? - [A-Z]{3}(?:/[A-Z]{2})? VIA$")
+_CONVOY_ORDER_RE = re.compile(r"^F [A-Z]{3}(?:/[A-Z]{2})? C A [A-Z]{3}(?:/[A-Z]{2})? - [A-Z]{3}(?:/[A-Z]{2})?$")
 _HOLD_RE = re.compile(r"^[AF] [A-Z]{3}(?:/[A-Z]{2})? H$")  # NEW
 _RETREAT_RE = re.compile(r"^[AF] [A-Z]{3}(?:/[A-Z]{2})? R [A-Z]{3}(?:/[A-Z]{2})?$")
 _ADJUST_RE = re.compile(r"^[AF] [A-Z]{3}(?:/[A-Z]{2})? [BD]$")  # build / disband
@@ -492,6 +494,16 @@ def _norm_power(name: str) -> str:
 
 def _is_simple_move(order: str) -> bool:
     return bool(_SIMPLE_MOVE_RE.match(order.strip()))
+
+
+def _is_convoy_move(order: str) -> bool:
+    """Army move via convoy, e.g. 'A NAP - SYR VIA'"""
+    return bool(_CONVOY_MOVE_RE.match(order.strip()))
+
+
+def _is_convoy_order(order: str) -> bool:
+    """Fleet convoy order, e.g. 'F ION C A NAP - SYR'"""
+    return bool(_CONVOY_ORDER_RE.match(order.strip()))
 
 
 def _is_retreat_order(order: str) -> bool:
@@ -737,12 +749,14 @@ def _generate_rich_order_context_movement(
         block.append(f"# Possible {mover_descr} unit movements & supports:")
 
         simple_moves = [o for o in orders if _is_simple_move(o)]
-        hold_orders = [o for o in orders if _is_hold_order(o)]  # NEW
+        convoy_moves = [o for o in orders if _is_convoy_move(o)]
+        convoy_orders = [o for o in orders if _is_convoy_order(o)]
+        hold_orders = [o for o in orders if _is_hold_order(o)]
 
-        if not simple_moves and not hold_orders:
+        if not simple_moves and not convoy_moves and not convoy_orders and not hold_orders:
             block.append(f"{ind}None")
         else:
-            # ---- Moves (same behaviour as before) ----
+            # ---- Regular moves ----
             for mv in simple_moves:
                 mover, dest = _split_move(mv)
                 occ = _dest_occupancy_desc(dest.split("/")[0][:3], game_map, board_state, power_name)
@@ -751,7 +765,19 @@ def _generate_rich_order_context_movement(
                 for s in _all_support_examples(mover, dest, possible_orders_for_power):
                     block.append(f"{ind * 2}Available Support: {s}")
 
-            # ---- Holds (new) ----
+            # ---- Convoy moves (army moving via convoy) ----
+            for mv in convoy_moves:
+                # 'A NAP - SYR VIA' -> display without VIA for clarity, note it's a convoy
+                bare = mv.replace(" VIA", "")
+                _, dest = _split_move(bare)
+                occ = _dest_occupancy_desc(dest.split("/")[0][:3], game_map, board_state, power_name)
+                block.append(f"{ind}{bare} (via convoy) {occ}")
+
+            # ---- Convoy orders (fleet convoying an army) ----
+            for co in convoy_orders:
+                block.append(f"{ind}{co}")
+
+            # ---- Holds ----
             for hd in hold_orders:
                 holder = hd.split(" H")[0]  # e.g., 'F DEN'
                 block.append(f"{ind}{hd}")
@@ -875,6 +901,8 @@ def _generate_condensed_move_summary(
 
         orders = possible_orders_for_power[loc]
         simple_moves = [o for o in orders if _is_simple_move(o)]
+        convoy_moves = [o for o in orders if _is_convoy_move(o)]
+        convoy_orders = [o for o in orders if _is_convoy_order(o)]
         hold_orders  = [o for o in orders if _is_hold_order(o)]
 
         lines.append(f"## {unit_desc} possible orders:")
@@ -907,6 +935,15 @@ def _generate_condensed_move_summary(
             lines.append(mv)
             for s in _friendly_supports_for(mv):
                 lines.append(f"    {s}")
+
+        # ---- emit convoy moves (army via convoy, shown without VIA) -------
+        for mv in convoy_moves:
+            bare = mv.replace(" VIA", "")
+            lines.append(f"{bare} (via convoy)")
+
+        # ---- emit convoy orders (fleet convoying an army) -----------------
+        for co in convoy_orders:
+            lines.append(co)
 
         # ---- emit holds ---------------------------------------------------
         for hd in hold_orders:

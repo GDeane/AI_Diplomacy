@@ -360,15 +360,22 @@ class BaseModelClient:
             return self.fallback_orders(possible_orders), []
 
         for move_str in moves:
-            # Check if it's in possible orders
+            # Check if it's in possible orders (exact match)
             if any(move_str in loc_orders for loc_orders in possible_orders.values()):
                 validated.append(move_str)
                 parts = move_str.split()
                 if len(parts) >= 2:
                     used_locs.add(parts[1][:3])
+            # Check if it's a convoy army move missing the VIA suffix
+            # LLMs output 'A NAP - SYR' but the engine expects 'A NAP - SYR VIA'
+            elif any(move_str + " VIA" in loc_orders for loc_orders in possible_orders.values()):
+                validated.append(move_str + " VIA")
+                parts = move_str.split()
+                if len(parts) >= 2:
+                    used_locs.add(parts[1][:3])
             else:
                 logger.debug(f"[{self.model_name}] Invalid move from LLM: {move_str}")
-                invalid_moves_found.append(move_str)  # ADDED: Collect invalid move
+                invalid_moves_found.append(move_str)
 
         # Fill missing with hold
         for loc, orders_list in possible_orders.items():
