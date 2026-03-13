@@ -372,7 +372,8 @@ class BaseModelClient:
 
         # Fill missing with hold
         for loc, orders_list in possible_orders.items():
-            if loc not in used_locs and orders_list:
+            loc_short = loc[:3]  # normalize 'STP/SC' -> 'STP' to match used_locs
+            if loc_short not in used_locs and orders_list:
                 hold_candidates = [o for o in orders_list if o.endswith("H")]
                 validated.append(hold_candidates[0] if hold_candidates else orders_list[0])
 

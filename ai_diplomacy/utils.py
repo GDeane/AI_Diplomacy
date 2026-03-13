@@ -123,13 +123,28 @@ def get_special_models() -> Dict[str, str]:
 def gather_possible_orders(game: Game, power_name: str) -> Dict[str, List[str]]:
     """
     Returns a dictionary mapping each orderable location to the list of valid orders.
+    Keys use the full unit location (e.g. 'STP/SC' not 'STP') so downstream code
+    can look up the unit in board_state.
     """
     orderable_locs = game.get_orderable_locations(power_name)
     all_possible = game.get_all_possible_orders()
 
+    # Build short->full location map from the power's actual units
+    # (and retreating units), so dual-coast provinces like STP/SC are keyed correctly.
+    power = game.get_power(power_name)
+    short_to_full = {}
+    for unit in power.units:
+        full_loc = unit[2:]       # e.g. 'STP/SC'
+        short_loc = full_loc[:3]  # e.g. 'STP'
+        short_to_full[short_loc] = full_loc
+    for unit in power.retreats:
+        full_loc = unit[2:]
+        short_to_full[full_loc[:3]] = full_loc
+
     result = {}
     for loc in orderable_locs:
-        result[loc] = all_possible.get(loc, [])
+        key = short_to_full.get(loc, loc)  # use full loc if available
+        result[key] = all_possible.get(loc, [])
     return result
 
 
