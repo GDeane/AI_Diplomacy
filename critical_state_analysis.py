@@ -55,7 +55,9 @@ that you cannot see.
 
 Based on everything available to you as {predictor_power}, predict:
 1. The contents of {target_power}'s diary entry for this phase (what are they thinking?)
-2. {target_power}'s likely submitted orders for this phase
+2. {target_power}'s strategic goals (a list of their current objectives)
+3. {target_power}'s relationships with each other power (Enemy, Unfriendly, Neutral, Friendly, or Ally)
+4. {target_power}'s likely submitted orders for this phase
 
 {target_power}'s units and legal orders are listed below for reference:
 {target_possible_orders}
@@ -67,6 +69,10 @@ based on the board state, negotiations, and strategic position. Consider their l
 allies, enemies, fears, and opportunities.",
   "predicted_diary": "Your prediction of {target_power}'s private diary entry for this phase. \
 Write it as if you were {target_power} writing in first person.",
+  "predicted_goals": ["goal 1", "goal 2", "..."],
+  "predicted_relationships": {{
+    "POWER_NAME": "Enemy|Unfriendly|Neutral|Friendly|Ally"
+  }},
   "predicted_orders": ["order1", "order2", "..."]
 }}"""
 
