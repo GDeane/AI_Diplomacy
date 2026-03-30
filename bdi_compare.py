@@ -195,7 +195,6 @@ def order_similarity(gt_orders: List[str], pred_orders: List[str]) -> dict:
             "pred_orders": [...],
             "exact_matches": [...],
             "exact_jaccard": float,
-            "unit_accuracy": float,       # fraction of GT units that appear in predictions
             "destination_accuracy": float, # fraction of GT (unit, dest) pairs matched
         }
     """
@@ -206,14 +205,9 @@ def order_similarity(gt_orders: List[str], pred_orders: List[str]) -> dict:
     exact_union = gt_normalized | pred_normalized
     exact_jaccard = len(exact_intersection) / len(exact_union) if exact_union else 1.0
 
-    # Partial matching: unit-level and destination-level
+    # Partial matching: destination-level
     gt_parsed = [order_to_unit_destination(o) for o in gt_orders]
     pred_parsed = [order_to_unit_destination(o) for o in pred_orders]
-
-    gt_units = {p[0] for p in gt_parsed}
-    pred_units = {p[0] for p in pred_parsed}
-    unit_overlap = gt_units & pred_units
-    unit_accuracy = len(unit_overlap) / len(gt_units) if gt_units else 1.0
 
     gt_unit_dest = {(p[0], p[2]) for p in gt_parsed}
     pred_unit_dest = {(p[0], p[2]) for p in pred_parsed}
@@ -225,7 +219,6 @@ def order_similarity(gt_orders: List[str], pred_orders: List[str]) -> dict:
         "pred_orders": sorted(pred_normalized),
         "exact_matches": sorted(exact_intersection),
         "exact_jaccard": round(exact_jaccard, 4),
-        "unit_accuracy": round(unit_accuracy, 4),
         "destination_accuracy": round(destination_accuracy, 4),
     }
 
@@ -393,7 +386,7 @@ def print_summary(result: dict) -> None:
         # Orders
         ord_ = s["orders"]
         print(f"    Orders:        exact_jaccard={ord_['exact_jaccard']:.2f}  "
-              f"unit_acc={ord_['unit_accuracy']:.2f}  dest_acc={ord_['destination_accuracy']:.2f}")
+              f"dest_acc={ord_['destination_accuracy']:.2f}")
         if ord_["exact_matches"]:
             print(f"      Exact matches: {ord_['exact_matches']}")
         gt_only = sorted(set(ord_["gt_orders"]) - set(ord_["exact_matches"]))
