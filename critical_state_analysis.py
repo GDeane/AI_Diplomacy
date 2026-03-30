@@ -343,21 +343,37 @@ async def run_single_prediction(
         }
 
 
+async def run_predictions_for_model(
+    model_id: str,
+    num_predictions: int,
+    prompt: str,
+) -> List[dict]:
+    """Run predictions sequentially for a single model to avoid rate limits."""
+    client = load_model_client(model_id)
+    client.system_prompt = PROBE_SYSTEM_PROMPT
+    results = []
+    for run_idx in range(num_predictions):
+        result = await run_single_prediction(client, prompt, model_id, run_idx)
+        results.append(result)
+    return results
+
+
 async def run_predictions(
     models: List[str],
     num_predictions: int,
     prompt: str,
 ) -> List[dict]:
-    """Run all predictions across all models."""
-    tasks = []
-    for model_id in models:
-        client = load_model_client(model_id)
-        client.system_prompt = PROBE_SYSTEM_PROMPT
-        for run_idx in range(num_predictions):
-            tasks.append(run_single_prediction(client, prompt, model_id, run_idx))
-
-    results = await asyncio.gather(*tasks)
-    return list(results)
+    """Run predictions for all models. Sequential within each model, parallel across models."""
+    model_tasks = [
+        run_predictions_for_model(model_id, num_predictions, prompt)
+        for model_id in models
+    ]
+    model_results = await asyncio.gather(*model_tasks)
+    # Flatten: interleave results to maintain [model0_run0, model0_run1, ..., model1_run0, ...] order
+    results = []
+    for model_result in model_results:
+        results.extend(model_result)
+    return results
 
 
 def get_game_object_at_phase(run_dir: str, phase_name: str):
