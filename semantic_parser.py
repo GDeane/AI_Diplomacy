@@ -220,15 +220,19 @@ async def parse_ground_truth(client, probe_data: dict) -> dict:
     """
     Extract BDI-JSON from ground truth data.
 
-    Relationships come from the structured field (pre-phase).
+    Relationships come from post-phase state (after the target's negotiation diary
+    entry, where it formulates intent and updates relationships for this phase).
     Orders come from the structured field.
     Agreements are extracted from diary text via LLM.
     """
     gt = probe_data["ground_truth"]
     target_power = probe_data["metadata"]["target_power"]
 
-    # Relationships: use pre-phase structured data directly
-    relationships = gt.get("target_relationships_pre_phase", {})
+    # Relationships: use post-phase state, which reflects the target's updated stance
+    # after writing its negotiation diary (the same step where it decides on orders).
+    # Pre-phase relationships are stale carryover from the previous phase and may not
+    # reflect the target's actual intent (e.g., still "Ally" while planning a stab).
+    relationships = gt.get("target_relationships_post_phase", {})
 
     # Orders: use actual submitted orders directly
     intended_orders = gt.get("target_orders", [])
