@@ -91,12 +91,14 @@ MODEL_SHORT = {
     "gemini-3.1-pro-preview": "Gemini",
     "openrouter-anthropic/claude-opus-4.6": "Claude",
     "openrouter-openai/gpt-5.4": "GPT",
+    "baseline_neutral_random": "Baseline",
 }
 
 MODEL_COLORS = {
     "Gemini": "#4285F4",
     "Claude": "#D97706",
     "GPT": "#10B981",
+    "Baseline": "#999999",
 }
 
 PROBE_HATCHES = {
@@ -144,6 +146,7 @@ def load_all_scores() -> pd.DataFrame:
                 "situation": betrayal_def.get("short_label", f"{predictor}→{target}"),
                 "has_betrayal": betrayal_def.get("has_betrayal", None),
                 "rel_accuracy": scores["relationships"]["normalized_accuracy"],
+                "rel_bilateral_accuracy": scores.get("relationship_bilateral", {}).get("normalized_accuracy", None),
                 "rel_exact_matches": scores["relationships"]["exact_matches"],
                 "rel_total": scores["relationships"]["total"],
                 "order_exact_jaccard": scores["orders"]["exact_jaccard"],
@@ -192,12 +195,13 @@ def plot_model_comparison(df: pd.DataFrame, output_dir: str):
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
     for ax, metric, title in [
-        (axes[0], "rel_accuracy", "Relationship Accuracy"),
+        (axes[0], "rel_bilateral_accuracy", "Bilateral Relationship Accuracy"),
         (axes[1], "order_exact_jaccard", "Order Exact Jaccard"),
     ]:
-        grouped = df.groupby(["model", "probe_type"])[metric]
+        sub = df.dropna(subset=[metric]) if metric == "rel_bilateral_accuracy" else df
+        grouped = sub.groupby(["model", "probe_type"])[metric]
         means = grouped.mean().unstack("probe_type")
-        sems = grouped.sem().unstack("probe_type")
+        stds = grouped.std().unstack("probe_type")
 
         x = np.arange(len(means.index))
         width = 0.35
@@ -207,7 +211,7 @@ def plot_model_comparison(df: pd.DataFrame, output_dir: str):
                 continue
             bars = ax.bar(
                 x + i * width, means[probe], width,
-                yerr=sems[probe], capsize=4,
+                yerr=stds[probe], capsize=4,
                 color=[MODEL_COLORS.get(m, "#999") for m in means.index],
                 hatch=PROBE_HATCHES[probe],
                 edgecolor="white", linewidth=0.5,
@@ -237,14 +241,18 @@ def plot_probe_ab_lift(df: pd.DataFrame, output_dir: str):
         (axes[1], "order_exact_jaccard", "Order Exact Jaccard"),
     ]:
         probe_means = df.groupby(["model", "probe_type"])[metric].mean().unstack("probe_type")
+        probe_stds = df.groupby(["model", "probe_type"])[metric].std().unstack("probe_type")
 
         for model in probe_means.index:
             if "A" in probe_means.columns and "B" in probe_means.columns:
                 a_val = probe_means.loc[model, "A"]
                 b_val = probe_means.loc[model, "B"]
+                a_std = probe_stds.loc[model, "A"]
+                b_std = probe_stds.loc[model, "B"]
                 color = MODEL_COLORS.get(model, "#999")
-                ax.plot([0, 1], [b_val, a_val], "o-", color=color, linewidth=2,
-                        markersize=8, label=model)
+                ax.errorbar([0, 1], [b_val, a_val], yerr=[b_std, a_std],
+                            fmt="o-", color=color, linewidth=2, markersize=8,
+                            capsize=4, label=model)
 
         ax.set_xticks([0, 1])
         ax.set_xticklabels(["Probe B\n(orders only)", "Probe A\n(diary + orders)"])
@@ -260,9 +268,9 @@ def plot_probe_ab_lift(df: pd.DataFrame, output_dir: str):
 
 
 def plot_situation_heatmap(df: pd.DataFrame, output_dir: str):
-    """Heatmap: model × situation for relationship accuracy (Probe A only)."""
-    probe_a = df[df["probe_type"] == "A"]
-    pivot = probe_a.groupby(["model", "situation"])["rel_accuracy"].mean().unstack("situation")
+    """Heatmap: model × situation for bilateral relationship accuracy (Probe A only)."""
+    probe_a = df[df["probe_type"] == "A"].dropna(subset=["rel_bilateral_accuracy"])
+    pivot = probe_a.groupby(["model", "situation"])["rel_bilateral_accuracy"].mean().unstack("situation")
 
     # Reorder columns by betrayal definition order
     situation_order = [v["short_label"] for v in BETRAYAL_DEFINITIONS.values()]
@@ -282,8 +290,8 @@ def plot_situation_heatmap(df: pd.DataFrame, output_dir: str):
             ax.text(j, i, f"{val:.2f}", ha="center", va="center",
                     color="black" if val > 0.6 else "white", fontsize=11)
 
-    plt.colorbar(im, ax=ax, label="Relationship Accuracy")
-    ax.set_title("Relationship Accuracy by Model × Situation (Probe A)")
+    plt.colorbar(im, ax=ax, label="Bilateral Relationship Accuracy")
+    ax.set_title("Bilateral Relationship Accuracy by Model × Situation (Probe A)\n(Target's relationship with predictor only)")
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "situation_heatmap.png"))
     plt.close()
@@ -347,7 +355,7 @@ def plot_betrayal_detection(df: pd.DataFrame, output_dir: str):
         if not bdef["has_betrayal"]:
             continue
         sit_df = probe_a_betrayal[probe_a_betrayal["situation"] == bdef["short_label"]]
-        for model in ["Gemini", "Claude", "GPT"]:
+        for model in ["Gemini", "Claude", "GPT", "Baseline"]:
             m_df = sit_df[sit_df["model"] == model]
             if len(m_df) > 0:
                 rate = m_df["detected_betrayal"].mean()
@@ -356,7 +364,7 @@ def plot_betrayal_detection(df: pd.DataFrame, output_dir: str):
 
     print("\nControl case (Probe A) — should be ~100% (no false positives):")
     control_a = control_df[control_df["probe_type"] == "A"]
-    for model in ["Gemini", "Claude", "GPT"]:
+    for model in ["Gemini", "Claude", "GPT", "Baseline"]:
         m_df = control_a[control_a["model"] == model]
         if len(m_df) > 0:
             rate = m_df["detected_betrayal"].mean()
@@ -370,11 +378,24 @@ def plot_per_situation_orders(df: pd.DataFrame, output_dir: str):
 
     situation_order = [v["short_label"] for v in BETRAYAL_DEFINITIONS.values()]
     probe_a = df[df["probe_type"] == "A"]
-    pivot = probe_a.groupby(["situation", "model"])["order_exact_jaccard"].mean().unstack("model")
-    pivot = pivot.reindex([s for s in situation_order if s in pivot.index])
+    pivot_mean = probe_a.groupby(["situation", "model"])["order_exact_jaccard"].mean().unstack("model")
+    pivot_std = probe_a.groupby(["situation", "model"])["order_exact_jaccard"].std().unstack("model")
+    pivot_mean = pivot_mean.reindex([s for s in situation_order if s in pivot_mean.index])
+    pivot_std = pivot_std.reindex([s for s in situation_order if s in pivot_std.index])
 
-    pivot.plot(kind="bar", ax=ax, color=[MODEL_COLORS.get(m, "#999") for m in pivot.columns],
-               edgecolor="white", linewidth=0.5, rot=30)
+    models_present = [m for m in pivot_mean.columns]
+    x = np.arange(len(pivot_mean.index))
+    n_models = len(models_present)
+    width = 0.8 / n_models
+
+    for i, model in enumerate(models_present):
+        ax.bar(x + i * width, pivot_mean[model], width,
+               yerr=pivot_std[model], capsize=3,
+               color=MODEL_COLORS.get(model, "#999"),
+               edgecolor="white", linewidth=0.5, label=model)
+
+    ax.set_xticks(x + width * (n_models - 1) / 2)
+    ax.set_xticklabels(pivot_mean.index, rotation=30, ha="right")
     ax.set_ylabel("Order Exact Jaccard")
     ax.set_title("Order Prediction Accuracy by Situation (Probe A)")
     ax.set_ylim(0, 1.05)
@@ -388,15 +409,18 @@ def plot_per_situation_orders(df: pd.DataFrame, output_dir: str):
 def print_summary_table(df: pd.DataFrame):
     """Print a summary table of all metrics."""
     print("\n=== SUMMARY TABLE ===\n")
-    print(f"{'Probe':>5s} {'Model':>8s} {'Rel Acc':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
-    print("-" * 50)
+    print(f"{'Probe':>5s} {'Model':>8s} {'Rel All':>8s} {'Rel Bil':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
+    print("-" * 60)
     for probe in ["A", "B"]:
-        for model in ["Gemini", "Claude", "GPT"]:
+        for model in ["Gemini", "Claude", "GPT", "Baseline"]:
             sub = df[(df["probe_type"] == probe) & (df["model"] == model)]
             if len(sub) == 0:
                 continue
+            bil = sub["rel_bilateral_accuracy"].dropna()
+            bil_str = f"{bil.mean():>8.3f}" if len(bil) > 0 else "     N/A"
             print(f"{probe:>5s} {model:>8s} "
                   f"{sub['rel_accuracy'].mean():>8.3f} "
+                  f"{bil_str} "
                   f"{sub['order_exact_jaccard'].mean():>8.3f} "
                   f"{sub['order_dest_accuracy'].mean():>9.3f} "
                   f"{len(sub):>4d}")
@@ -411,13 +435,16 @@ def print_summary_table(df: pd.DataFrame):
         bdef = [v for v in BETRAYAL_DEFINITIONS.values() if v["short_label"] == sit][0]
         betrayal_str = f"BETRAYAL ({bdef['description']})" if bdef["has_betrayal"] else "NO BETRAYAL (control)"
         print(f"\n  {sit} — {betrayal_str}")
-        print(f"  {'Model':>8s} {'Rel Acc':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
-        for model in ["Gemini", "Claude", "GPT"]:
+        print(f"  {'Model':>8s} {'Rel All':>8s} {'Rel Bil':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
+        for model in ["Gemini", "Claude", "GPT", "Baseline"]:
             m_df = sit_df[sit_df["model"] == model]
             if len(m_df) == 0:
                 continue
+            bil = m_df["rel_bilateral_accuracy"].dropna()
+            bil_str = f"{bil.mean():>8.3f}" if len(bil) > 0 else "     N/A"
             print(f"  {model:>8s} "
                   f"{m_df['rel_accuracy'].mean():>8.3f} "
+                  f"{bil_str} "
                   f"{m_df['order_exact_jaccard'].mean():>8.3f} "
                   f"{m_df['order_dest_accuracy'].mean():>9.3f} "
                   f"{len(m_df):>4d}")

@@ -253,11 +253,11 @@ def compare_bdi(gt_bdi: dict, pred_bdi: dict, predictor_power: str = None) -> di
     gt_agreements = gt_bdi.get("agreements", [])
     pred_agreements = pred_bdi.get("agreements", [])
 
+    gt_rels = gt_bdi.get("relationships", {})
+    pred_rels = pred_bdi.get("relationships", {})
+
     result = {
-        "relationships": relationship_distance(
-            gt_bdi.get("relationships", {}),
-            pred_bdi.get("relationships", {}),
-        ),
+        "relationships": relationship_distance(gt_rels, pred_rels),
         "agreements_all": agreement_similarity(gt_agreements, pred_agreements),
         "orders": order_similarity(
             gt_bdi.get("intended_orders", []),
@@ -270,6 +270,11 @@ def compare_bdi(gt_bdi: dict, pred_bdi: dict, predictor_power: str = None) -> di
         pred_bilateral, pred_third_party = split_agreements_by_scope(pred_agreements, predictor_power)
         result["agreements_bilateral"] = agreement_similarity(gt_bilateral, pred_bilateral)
         result["agreements_third_party"] = agreement_similarity(gt_third_party, pred_third_party)
+
+        # Bilateral relationship: target's relationship with predictor specifically
+        bilateral_gt = {predictor_power: gt_rels.get(predictor_power, "Neutral")}
+        bilateral_pred = {predictor_power: pred_rels.get(predictor_power, "Neutral")}
+        result["relationship_bilateral"] = relationship_distance(bilateral_gt, bilateral_pred)
 
     return result
 
@@ -325,6 +330,8 @@ def process_bdi_file(bdi_file: str) -> dict:
         if valid_results[0]["scores"].get("agreements_bilateral"):
             aggregate["agreement_bilateral_jaccard"] = _agg(["agreements_bilateral", "jaccard"])
             aggregate["agreement_third_party_jaccard"] = _agg(["agreements_third_party", "jaccard"])
+        if valid_results[0]["scores"].get("relationship_bilateral"):
+            aggregate["relationship_bilateral_accuracy"] = _agg(["relationship_bilateral", "normalized_accuracy"])
     else:
         aggregate = None
 
@@ -401,7 +408,9 @@ def print_summary(result: dict) -> None:
         agg = result["aggregate"]
         print(f"\n  {'─'*50}")
         print(f"  AGGREGATE (n={len([r for r in result['per_prediction'] if r['scores']])})")
-        print(f"    Relationship accuracy:      {agg['relationship_accuracy']['mean']:.4f}")
+        print(f"    Relationship accuracy (all): {agg['relationship_accuracy']['mean']:.4f}")
+        if "relationship_bilateral_accuracy" in agg:
+            print(f"    Relationship accuracy (bil): {agg['relationship_bilateral_accuracy']['mean']:.4f}")
         print(f"    Agreement Jaccard (all):     {agg['agreement_all_jaccard']['mean']:.4f}")
         if "agreement_bilateral_jaccard" in agg:
             print(f"    Agreement Jaccard (bilat.):  {agg['agreement_bilateral_jaccard']['mean']:.4f}")
