@@ -191,13 +191,12 @@ def check_betrayal_detection(pred_orders: list, situation_key: tuple) -> bool | 
 # Visualization
 # ---------------------------------------------------------------------------
 def plot_model_comparison(df: pd.DataFrame, output_dir: str):
-    """Bar chart: mean metrics per model, grouped by probe type."""
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-
-    for ax, metric, title in [
-        (axes[0], "rel_bilateral_accuracy", "Bilateral Relationship Accuracy"),
-        (axes[1], "order_exact_jaccard", "Order Exact Jaccard"),
+    """Bar chart: mean metrics per model, grouped by probe type. One PNG per metric."""
+    for metric, title, fname in [
+        ("rel_bilateral_accuracy", "Bilateral Relationship Accuracy", "model_comparison_rel_bilateral"),
+        ("order_exact_jaccard", "Order Exact Jaccard", "model_comparison_order_jaccard"),
     ]:
+        fig, ax = plt.subplots(figsize=(6, 5))
         sub = df.dropna(subset=[metric]) if metric == "rel_bilateral_accuracy" else df
         grouped = sub.groupby(["model", "probe_type"])[metric]
         means = grouped.mean().unstack("probe_type")
@@ -209,7 +208,7 @@ def plot_model_comparison(df: pd.DataFrame, output_dir: str):
         for i, probe in enumerate(["A", "B"]):
             if probe not in means.columns:
                 continue
-            bars = ax.bar(
+            ax.bar(
                 x + i * width, means[probe], width,
                 yerr=stds[probe], capsize=4,
                 color=[MODEL_COLORS.get(m, "#999") for m in means.index],
@@ -225,23 +224,22 @@ def plot_model_comparison(df: pd.DataFrame, output_dir: str):
         ax.set_ylim(0, 1.05)
         ax.legend()
         ax.grid(axis="y", alpha=0.3)
-
-    fig.suptitle("Model Comparison: Probe A (diary+orders) vs Probe B (orders only)", fontsize=14)
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, "model_comparison.png"))
-    plt.close()
+        ax.set_title(f"{title}: Probe A vs Probe B", fontsize=13)
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f"{fname}.png"))
+        plt.close()
 
 
 def plot_probe_ab_lift(df: pd.DataFrame, output_dir: str):
     """Paired comparison showing the lift from diary access (Probe A vs B)."""
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-
-    for ax, metric, title in [
-        (axes[0], "rel_accuracy", "Relationship Accuracy"),
-        (axes[1], "order_exact_jaccard", "Order Exact Jaccard"),
+    for metric, title, fname in [
+        ("rel_bilateral_accuracy", "Bilateral Relationship Accuracy", "probe_ab_lift_rel_bilateral"),
+        ("order_exact_jaccard", "Order Exact Jaccard", "probe_ab_lift_order_jaccard"),
     ]:
-        probe_means = df.groupby(["model", "probe_type"])[metric].mean().unstack("probe_type")
-        probe_stds = df.groupby(["model", "probe_type"])[metric].std().unstack("probe_type")
+        fig, ax = plt.subplots(figsize=(6, 5))
+        sub = df.dropna(subset=[metric]) if metric == "rel_bilateral_accuracy" else df
+        probe_means = sub.groupby(["model", "probe_type"])[metric].mean().unstack("probe_type")
+        probe_stds = sub.groupby(["model", "probe_type"])[metric].std().unstack("probe_type")
 
         for model in probe_means.index:
             if "A" in probe_means.columns and "B" in probe_means.columns:
@@ -260,11 +258,10 @@ def plot_probe_ab_lift(df: pd.DataFrame, output_dir: str):
         ax.set_ylim(0, 1.05)
         ax.legend()
         ax.grid(axis="y", alpha=0.3)
-
-    fig.suptitle("Effect of Diary Access on Prediction Accuracy", fontsize=14)
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, "probe_ab_lift.png"))
-    plt.close()
+        ax.set_title(f"Effect of Diary Access on {title}", fontsize=13)
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f"{fname}.png"))
+        plt.close()
 
 
 def plot_situation_heatmap(df: pd.DataFrame, output_dir: str):
@@ -303,10 +300,8 @@ def plot_betrayal_detection(df: pd.DataFrame, output_dir: str):
     betrayal_df = df[df["has_betrayal"] == True]
     control_df = df[df["has_betrayal"] == False]
 
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-
-    # Left: detection rate for betrayal cases
-    ax = axes[0]
+    # Detection rate by model (Probe A vs B)
+    fig, ax = plt.subplots(figsize=(6, 5))
     det = betrayal_df.groupby(["model", "probe_type"])["detected_betrayal"].mean().unstack("probe_type")
     x = np.arange(len(det.index))
     width = 0.35
@@ -328,9 +323,12 @@ def plot_betrayal_detection(df: pd.DataFrame, output_dir: str):
     ax.set_ylim(0, 1.05)
     ax.legend()
     ax.grid(axis="y", alpha=0.3)
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, "betrayal_detection_by_model.png"))
+    plt.close()
 
-    # Right: per-situation breakdown (Probe A only)
-    ax = axes[1]
+    # Per-situation breakdown (Probe A only)
+    fig, ax = plt.subplots(figsize=(8, 5))
     probe_a_betrayal = betrayal_df[betrayal_df["probe_type"] == "A"]
     sit_det = probe_a_betrayal.groupby(["situation", "model"])["detected_betrayal"].mean().unstack("model")
     sit_det = sit_det.reindex(
@@ -343,9 +341,8 @@ def plot_betrayal_detection(df: pd.DataFrame, output_dir: str):
     ax.set_ylim(0, 1.05)
     ax.legend(title="Model")
     ax.grid(axis="y", alpha=0.3)
-
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, "betrayal_detection.png"))
+    plt.savefig(os.path.join(output_dir, "betrayal_detection_by_situation.png"))
     plt.close()
 
     # Print summary
@@ -409,8 +406,8 @@ def plot_per_situation_orders(df: pd.DataFrame, output_dir: str):
 def print_summary_table(df: pd.DataFrame):
     """Print a summary table of all metrics."""
     print("\n=== SUMMARY TABLE ===\n")
-    print(f"{'Probe':>5s} {'Model':>8s} {'Rel All':>8s} {'Rel Bil':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
-    print("-" * 60)
+    print(f"{'Probe':>5s} {'Model':>8s} {'Rel Bil':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
+    print("-" * 50)
     for probe in ["A", "B"]:
         for model in ["Gemini", "Claude", "GPT", "Baseline"]:
             sub = df[(df["probe_type"] == probe) & (df["model"] == model)]
@@ -419,7 +416,6 @@ def print_summary_table(df: pd.DataFrame):
             bil = sub["rel_bilateral_accuracy"].dropna()
             bil_str = f"{bil.mean():>8.3f}" if len(bil) > 0 else "     N/A"
             print(f"{probe:>5s} {model:>8s} "
-                  f"{sub['rel_accuracy'].mean():>8.3f} "
                   f"{bil_str} "
                   f"{sub['order_exact_jaccard'].mean():>8.3f} "
                   f"{sub['order_dest_accuracy'].mean():>9.3f} "
@@ -435,7 +431,7 @@ def print_summary_table(df: pd.DataFrame):
         bdef = [v for v in BETRAYAL_DEFINITIONS.values() if v["short_label"] == sit][0]
         betrayal_str = f"BETRAYAL ({bdef['description']})" if bdef["has_betrayal"] else "NO BETRAYAL (control)"
         print(f"\n  {sit} — {betrayal_str}")
-        print(f"  {'Model':>8s} {'Rel All':>8s} {'Rel Bil':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
+        print(f"  {'Model':>8s} {'Rel Bil':>8s} {'Ord Jac':>8s} {'Dest Acc':>9s} {'N':>4s}")
         for model in ["Gemini", "Claude", "GPT", "Baseline"]:
             m_df = sit_df[sit_df["model"] == model]
             if len(m_df) == 0:
@@ -443,7 +439,6 @@ def print_summary_table(df: pd.DataFrame):
             bil = m_df["rel_bilateral_accuracy"].dropna()
             bil_str = f"{bil.mean():>8.3f}" if len(bil) > 0 else "     N/A"
             print(f"  {model:>8s} "
-                  f"{m_df['rel_accuracy'].mean():>8.3f} "
                   f"{bil_str} "
                   f"{m_df['order_exact_jaccard'].mean():>8.3f} "
                   f"{m_df['order_dest_accuracy'].mean():>9.3f} "
