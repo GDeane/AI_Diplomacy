@@ -33,7 +33,7 @@ All figures and data tables are committed directly in this repository so you can
 | [`visualization_results/tom_analysis_20260408_160417/`](visualization_results/tom_analysis_20260408_160417/) | **ToM analysis** -- all figures from the paper (heatmaps, betrayal detection charts, probe comparisons) plus [`all_predictions.csv`](visualization_results/tom_analysis_20260408_160417/all_predictions.csv) with every prediction scored |
 | [`visualization_results/csv_only_enhanced_20250727_131340_200days/`](visualization_results/csv_only_enhanced_20250727_131340_200days/) | **Game-level model comparison** -- success rates, order distributions, power heatmaps, and temporal analysis across 61 models. See [`ANALYSIS_SUMMARY.md`](visualization_results/csv_only_enhanced_20250727_131340_200days/ANALYSIS_SUMMARY.md) for the full leaderboard |
 
-> **Note:** The raw game data (`results/`) is gitignored due to size. To visualize a game you've run yourself, see [Visualizing a Game](#visualizing-a-game) below.
+> **Note:** Most of the raw game data (`results/`) is gitignored due to size. To visualize a game you've run yourself, see [Visualizing a Game](#visualizing-a-game) below.
 
 ### Reproducing the Results
 
