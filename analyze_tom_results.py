@@ -38,6 +38,7 @@ BETRAYAL_DEFINITIONS = {
         "victim": "AUSTRIA",
         "label": "run4 F1901M\nAustria→Italy",
         "short_label": "R4 AUS→ITA",
+        "detailed_label": "R4 AUS→ITA\nEasy-to-spot betrayal",
         "description": "Italy stabs Austria by attacking home SC from Tyrolia",
         "detection_type": "commission",
         # Betrayal detected if ANY of these orders appear in predictions
@@ -49,6 +50,7 @@ BETRAYAL_DEFINITIONS = {
         "victim": None,
         "label": "run14 F1903M\nAustria→Italy",
         "short_label": "R14 AUS→ITA",
+        "detailed_label": "R14 AUS→ITA\nCooperation case",
         "description": "No betrayal (control case)",
         "detection_type": "none",
         # False positive if this order appears
@@ -60,6 +62,7 @@ BETRAYAL_DEFINITIONS = {
         "victim": "ENGLAND",
         "label": "run14 S1902M\nEngland→France",
         "short_label": "R14 ENG→FRA",
+        "detailed_label": "R14 ENG→FRA\nActive deception",
         "description": "France betrays England by violating Channel DMZ",
         "detection_type": "commission",
         "betrayal_orders": ["F BRE - ENG", "A PIC - BEL"],
@@ -70,6 +73,7 @@ BETRAYAL_DEFINITIONS = {
         "victim": "TURKEY",
         "label": "run14 S1902M\nTurkey→Austria",
         "short_label": "R14 TUR→AUS",
+        "detailed_label": "R14 TUR→AUS\nActive deception",
         "description": "Austria betrays Turkey by withholding promised support",
         "detection_type": "omission",
         # Betrayal detected if NONE of these orders appear in predictions
@@ -81,6 +85,7 @@ BETRAYAL_DEFINITIONS = {
         "victim": "ITALY",
         "label": "run14 S1904M\nItaly→Austria",
         "short_label": "R14 ITA→AUS",
+        "detailed_label": "R14 ITA→AUS\nDeception with warnings",
         "description": "Austria stabs Italy by attacking Venice",
         "detection_type": "commission",
         "betrayal_orders": ["A TRI - VEN"],
@@ -151,6 +156,8 @@ def load_all_scores() -> pd.DataFrame:
                 "rel_total": scores["relationships"]["total"],
                 "order_exact_jaccard": scores["orders"]["exact_jaccard"],
                 "order_dest_accuracy": scores["orders"]["destination_accuracy"],
+                "agr_bilateral_jaccard": scores.get("agreements_bilateral", {}).get("jaccard", None),
+                "agr_third_party_jaccard": scores.get("agreements_third_party", {}).get("jaccard", None),
                 "pred_orders": scores["orders"]["pred_orders"],
                 "gt_orders": scores["orders"]["gt_orders"],
             }
@@ -170,6 +177,10 @@ def check_betrayal_detection(pred_orders: list, situation_key: tuple) -> bool | 
     bdef = BETRAYAL_DEFINITIONS.get(situation_key)
     if not bdef:
         return None
+
+    # Empty/failed predictions should not count as detection
+    if not pred_orders:
+        return False if bdef["has_betrayal"] else None
 
     pred_set = set(pred_orders)
 
@@ -269,15 +280,17 @@ def plot_situation_heatmap(df: pd.DataFrame, output_dir: str):
     probe_a = df[df["probe_type"] == "A"].dropna(subset=["rel_bilateral_accuracy"])
     pivot = probe_a.groupby(["model", "situation"])["rel_bilateral_accuracy"].mean().unstack("situation")
 
-    # Reorder columns by betrayal definition order
+    # Reorder columns by betrayal definition order, using detailed labels
+    short_to_detailed = {v["short_label"]: v["detailed_label"] for v in BETRAYAL_DEFINITIONS.values()}
     situation_order = [v["short_label"] for v in BETRAYAL_DEFINITIONS.values()]
     pivot = pivot[[c for c in situation_order if c in pivot.columns]]
+    detailed_labels = [short_to_detailed.get(c, c) for c in pivot.columns]
 
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(12, 4))
     im = ax.imshow(pivot.values, cmap="RdYlGn", vmin=0.4, vmax=1.0, aspect="auto")
 
     ax.set_xticks(range(len(pivot.columns)))
-    ax.set_xticklabels(pivot.columns, rotation=30, ha="right")
+    ax.set_xticklabels(detailed_labels, rotation=30, ha="center", fontsize=10)
     ax.set_yticks(range(len(pivot.index)))
     ax.set_yticklabels(pivot.index)
 
@@ -288,7 +301,7 @@ def plot_situation_heatmap(df: pd.DataFrame, output_dir: str):
                     color="black" if val > 0.6 else "white", fontsize=11)
 
     plt.colorbar(im, ax=ax, label="Bilateral Relationship Accuracy")
-    ax.set_title("Bilateral Relationship Accuracy by Model × Situation (Probe A)\n(Target's relationship with predictor only)")
+    ax.set_title("Bilateral Relationship Accuracy by Model and Situation")
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "situation_heatmap.png"))
     plt.close()
@@ -328,16 +341,17 @@ def plot_betrayal_detection(df: pd.DataFrame, output_dir: str):
     plt.close()
 
     # Per-situation breakdown (Probe A only)
-    fig, ax = plt.subplots(figsize=(8, 5))
-    probe_a_betrayal = betrayal_df[betrayal_df["probe_type"] == "A"]
+    fig, ax = plt.subplots(figsize=(10, 5))
+    probe_a_betrayal = betrayal_df[(betrayal_df["probe_type"] == "A") & (betrayal_df["model"] != "Baseline")]
     sit_det = probe_a_betrayal.groupby(["situation", "model"])["detected_betrayal"].mean().unstack("model")
-    sit_det = sit_det.reindex(
-        [v["short_label"] for v in BETRAYAL_DEFINITIONS.values() if v["has_betrayal"]],
-    )
+    betrayal_short_labels = [v["short_label"] for v in BETRAYAL_DEFINITIONS.values() if v["has_betrayal"]]
+    betrayal_detailed_labels = [v["detailed_label"] for v in BETRAYAL_DEFINITIONS.values() if v["has_betrayal"]]
+    sit_det = sit_det.reindex(betrayal_short_labels)
     sit_det.plot(kind="bar", ax=ax, color=[MODEL_COLORS.get(m, "#999") for m in sit_det.columns],
-                 edgecolor="white", linewidth=0.5, rot=30)
+                 edgecolor="white", linewidth=0.5, rot=0)
+    ax.set_xticklabels(betrayal_detailed_labels, rotation=30, ha="center", fontsize=10)
     ax.set_ylabel("Detection Rate")
-    ax.set_title("Betrayal Detection by Situation\n(Probe A only)")
+    ax.set_title("Betrayal Detection by Situation")
     ax.set_ylim(0, 1.05)
     ax.legend(title="Model")
     ax.grid(axis="y", alpha=0.3)
@@ -400,6 +414,92 @@ def plot_per_situation_orders(df: pd.DataFrame, output_dir: str):
     ax.grid(axis="y", alpha=0.3)
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "per_situation_orders.png"))
+    plt.close()
+
+
+def plot_agreement_bilateral_vs_thirdparty(df: pd.DataFrame, output_dir: str):
+    """Bar chart: bilateral vs third-party agreement Jaccard by model (Probe A)."""
+    probe_a = df[df["probe_type"] == "A"]
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+
+    models = ["Gemini", "Claude", "GPT"]
+    models_present = [m for m in models if m in probe_a["model"].unique()]
+    x = np.arange(len(models_present))
+    width = 0.35
+
+    for i, (col, label) in enumerate([
+        ("agr_bilateral_jaccard", "Bilateral"),
+        ("agr_third_party_jaccard", "Third-Party"),
+    ]):
+        sub = probe_a.dropna(subset=[col])
+        means = sub.groupby("model")[col].mean().reindex(models_present)
+        stds = sub.groupby("model")[col].std().reindex(models_present)
+        ax.bar(
+            x + i * width, means, width,
+            yerr=stds, capsize=4,
+            color=[MODEL_COLORS.get(m, "#999") for m in models_present],
+            hatch="" if i == 0 else "//",
+            edgecolor="white", linewidth=0.5,
+            alpha=0.85 if i == 0 else 0.6,
+            label=label,
+        )
+
+    ax.set_ylabel("Agreement Jaccard")
+    ax.set_xticks(x + width / 2)
+    ax.set_xticklabels(models_present)
+    ax.set_ylim(0, 1.05)
+    ax.legend()
+    ax.grid(axis="y", alpha=0.3)
+    ax.set_title("Agreement Prediction: Bilateral vs Third-Party (Probe A)")
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, "agreement_bilateral_vs_thirdparty.png"))
+    plt.close()
+
+
+def plot_gemini_probe_ab_detected(df: pd.DataFrame, output_dir: str):
+    """Gemini Probe A vs B for the two situations where it detected betrayal."""
+    gemini = df[df["model"] == "Gemini"]
+    situations = ["R4 AUS→ITA", "R14 ITA→AUS"]
+    metrics = [
+        ("detected_betrayal", "Betrayal Detection Rate"),
+        ("rel_bilateral_accuracy", "Bilateral Relationship Accuracy"),
+        ("order_exact_jaccard", "Order Exact Jaccard"),
+    ]
+
+    fig, axes = plt.subplots(1, len(metrics), figsize=(5 * len(metrics), 5))
+
+    for ax, (metric, title) in zip(axes, metrics):
+        x = np.arange(len(situations))
+        width = 0.35
+
+        for i, probe in enumerate(["A", "B"]):
+            means, stds = [], []
+            for sit in situations:
+                sub = gemini[(gemini["situation"] == sit) & (gemini["probe_type"] == probe)]
+                vals = sub[metric].dropna()
+                means.append(vals.mean() if len(vals) > 0 else 0)
+                stds.append(vals.std() if len(vals) > 0 else 0)
+            ax.bar(
+                x + i * width, means, width,
+                yerr=stds, capsize=5,
+                color="#4285F4",
+                hatch=PROBE_HATCHES[probe],
+                edgecolor="white", linewidth=0.5,
+                alpha=0.85 if probe == "A" else 0.5,
+                label=f"Probe {probe}",
+            )
+
+        ax.set_ylabel(title)
+        ax.set_xticks(x + width / 2)
+        ax.set_xticklabels(situations)
+        ax.set_ylim(0, 1.05)
+        ax.legend()
+        ax.grid(axis="y", alpha=0.3)
+
+    fig.suptitle("Gemini: Probe A vs B on Detected Betrayal Situations", fontsize=13)
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, "gemini_probe_ab_detected.png"))
     plt.close()
 
 
@@ -470,7 +570,9 @@ def main():
     plot_probe_ab_lift(df, output_dir)
     plot_situation_heatmap(df, output_dir)
     plot_betrayal_detection(df, output_dir)
+    plot_agreement_bilateral_vs_thirdparty(df, output_dir)
     plot_per_situation_orders(df, output_dir)
+    plot_gemini_probe_ab_detected(df, output_dir)
 
     # Save DataFrame for further analysis
     csv_path = os.path.join(output_dir, "all_predictions.csv")
