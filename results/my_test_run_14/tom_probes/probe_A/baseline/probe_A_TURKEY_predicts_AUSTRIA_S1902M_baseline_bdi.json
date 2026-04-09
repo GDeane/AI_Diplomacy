@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "TURKEY",
+    "target_power": "AUSTRIA",
+    "probe_type": "A",
+    "models": [
+      "baseline_neutral_random"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:42:01.425052+00:00",
+    "parser_model": "baseline",
+    "parsed_at": "baseline"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Ally",
+      "TURKEY": "Enemy",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Neutral",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "BOH"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "TYR"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "dmz",
+        "region": "GAL"
+      }
+    ],
+    "intended_orders": [
+      "F GRE - AEG",
+      "F TRI - ALB",
+      "A SER - BUL",
+      "A BUD S A VIE",
+      "A VIE S A BUD"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A BUD - RUM",
+          "F GRE S F RUM - BUL/EC",
+          "A SER S F GRE - BUL/SC",
+          "F TRI - VEN",
+          "A VIE S A VEN - TRI"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A BUD - TRI",
+          "F GRE S A SEV - BUL",
+          "A SER S F BLA - BUL",
+          "F TRI H",
+          "A VIE S A MUN - BOH"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A BUD S A WAR - GAL",
+          "F GRE S F BLA - BUL",
+          "A SER S F TRI - ALB",
+          "F TRI S A VEN",
+          "A VIE S A SER - TRI"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A BUD S A VEN - TRI",
+          "F GRE S A SEV - BUL",
+          "A SER S A CON - RUM",
+          "F TRI - ADR",
+          "A VIE S A MUN - BOH"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A BUD S A WAR - GAL",
+          "F GRE S F ION - AEG",
+          "A SER S F RUM - BUL",
+          "F TRI - VEN",
+          "A VIE S A SER - TRI"
+        ]
+      }
+    }
+  ]
+}

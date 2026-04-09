@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_4/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_4",
+    "phase": "F1901M",
+    "predictor_power": "AUSTRIA",
+    "target_power": "ITALY",
+    "probe_type": "A",
+    "models": [
+      "openrouter-anthropic/claude-opus-4.6"
+    ],
+    "num_predictions": 2,
+    "timestamp": "2026-03-19T17:58:23.723201+00:00",
+    "parser_model": "gemini-2.5-flash",
+    "parsed_at": "2026-03-23T16:09:08.412291+00:00"
+  },
+  "per_prediction": [
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 0,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Enemy",
+              "pred": "Friendly",
+              "distance": 3
+            },
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            }
+          },
+          "mean_distance": 1.5,
+          "normalized_accuracy": 0.625,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "BEL"
+            ],
+            [
+              "FRANCE",
+              "move",
+              "POR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "HOL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SIL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SWE"
+            ],
+            [
+              "TURKEY",
+              "dmz",
+              "GRE"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "ARM"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "SER"
+            ],
+            [
+              "TURKEY",
+              "support",
+              "SER"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A APU - VEN",
+            "A TYR - TRI",
+            "F ION - TUN"
+          ],
+          "pred_orders": [
+            "A APU - TUN",
+            "A TYR - VEN",
+            "F ION C A APU - TUN"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "unit_accuracy": 1.0,
+          "destination_accuracy": 0.3333
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "BEL"
+            ],
+            [
+              "FRANCE",
+              "move",
+              "POR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "HOL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SIL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SWE"
+            ],
+            [
+              "TURKEY",
+              "dmz",
+              "GRE"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "ARM"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "SER"
+            ],
+            [
+              "TURKEY",
+              "support",
+              "SER"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 1,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Enemy",
+              "pred": "Friendly",
+              "distance": 3
+            },
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            }
+          },
+          "mean_distance": 1.5,
+          "normalized_accuracy": 0.625,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "BEL"
+            ],
+            [
+              "FRANCE",
+              "move",
+              "POR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "HOL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SIL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SWE"
+            ],
+            [
+              "TURKEY",
+              "dmz",
+              "GRE"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "ARM"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "SER"
+            ],
+            [
+              "TURKEY",
+              "support",
+              "SER"
+            ]
+          ],
+          "pred_set": [
+            [
+              "AUSTRIA",
+              "move",
+              "TYR"
+            ]
+          ],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A APU - VEN",
+            "A TYR - TRI",
+            "F ION - TUN"
+          ],
+          "pred_orders": [
+            "A APU - TUN",
+            "A TYR H",
+            "F ION C A APU - TUN"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "unit_accuracy": 1.0,
+          "destination_accuracy": 0.3333
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [
+            [
+              "AUSTRIA",
+              "move",
+              "TYR"
+            ]
+          ],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "BEL"
+            ],
+            [
+              "FRANCE",
+              "move",
+              "POR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "HOL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SIL"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "SWE"
+            ],
+            [
+              "TURKEY",
+              "dmz",
+              "GRE"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "ARM"
+            ],
+            [
+              "TURKEY",
+              "move",
+              "SER"
+            ],
+            [
+              "TURKEY",
+              "support",
+              "SER"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "relationship_accuracy": {
+      "mean": 0.625,
+      "per_run": [
+        0.625,
+        0.625
+      ]
+    },
+    "agreement_all_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0
+      ]
+    },
+    "order_exact_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0
+      ]
+    },
+    "order_destination_accuracy": {
+      "mean": 0.3333,
+      "per_run": [
+        0.3333,
+        0.3333
+      ]
+    },
+    "agreement_bilateral_jaccard": {
+      "mean": 0.5,
+      "per_run": [
+        1.0,
+        0.0
+      ]
+    },
+    "agreement_third_party_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "ENGLAND",
+    "target_power": "FRANCE",
+    "probe_type": "B",
+    "models": [
+      "gemini-3.1-pro-preview"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:28:40.448412+00:00",
+    "parser_model": "gemini-3.1-pro-preview",
+    "parsed_at": "2026-03-30T15:21:34.469324+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Friendly",
+      "TURKEY": "Neutral",
+      "ENGLAND": "Enemy",
+      "AUSTRIA": "Friendly",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "BUR"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "ENG"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "GOL"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "TYS"
+      }
+    ],
+    "intended_orders": [
+      "F BRE - ENG",
+      "A PIC - BEL",
+      "A PAR - PIC",
+      "F POR - MAO",
+      "A SPA - GAS"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F POR H",
+          "A SPA H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F POR S F BRE - MAO",
+          "A SPA H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F BRE - MAO",
+          "A SPA - MAR",
+          "F POR - SPA/SC"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "A SPA - MAR",
+          "F POR - SPA/SC"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F POR - SPA/SC",
+          "A SPA - MAR"
+        ]
+      }
+    }
+  ]
+}

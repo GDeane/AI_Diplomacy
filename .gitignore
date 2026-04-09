@@ -133,7 +133,9 @@ data
 # Tensorboard
 events.out.*
 
-results
+results/*
+!results/my_test_run_4/
+!results/my_test_run_14/
 logs
 game.json
 .ruff_cache

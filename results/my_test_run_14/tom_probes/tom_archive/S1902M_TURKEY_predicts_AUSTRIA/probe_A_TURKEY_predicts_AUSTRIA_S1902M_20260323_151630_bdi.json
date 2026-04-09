@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "TURKEY",
+    "target_power": "AUSTRIA",
+    "probe_type": "A",
+    "models": [
+      "openrouter-anthropic/claude-opus-4.6"
+    ],
+    "num_predictions": 3,
+    "timestamp": "2026-03-23T19:16:30.386077+00:00",
+    "parser_model": "gemini-2.5-flash",
+    "parsed_at": "2026-03-23T19:21:47.519154+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Ally",
+      "TURKEY": "Enemy",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Neutral",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "BOH"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "TYR"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "dmz",
+        "region": "GAL"
+      }
+    ],
+    "intended_orders": [
+      "F GRE - AEG",
+      "F TRI - ALB",
+      "A SER - BUL",
+      "A BUD S A VIE",
+      "A VIE S A BUD"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "TURKEY": "Ally",
+          "RUSSIA": "Enemy",
+          "ITALY": "Neutral",
+          "GERMANY": "Friendly",
+          "ENGLAND": "Friendly",
+          "FRANCE": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "RUM"
+          },
+          {
+            "counterparty": "ITALY",
+            "type": "move",
+            "region": "GRE"
+          }
+        ],
+        "intended_orders": [
+          "A SER S A BUL - RUM",
+          "A BUD S A BUL - RUM",
+          "F GRE H",
+          "F TRI - ALB",
+          "A VIE - GAL"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "TURKEY": "Ally",
+          "RUSSIA": "Enemy",
+          "ITALY": "Neutral",
+          "GERMANY": "Neutral",
+          "ENGLAND": "Friendly",
+          "FRANCE": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "RUM"
+          },
+          {
+            "counterparty": "TURKEY",
+            "type": "split",
+            "region": "RUM,BUD,SEV"
+          }
+        ],
+        "intended_orders": [
+          "A SER S A BUL - RUM",
+          "A BUD S A BUL - RUM",
+          "F GRE H",
+          "F TRI - ALB",
+          "A VIE H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "TURKEY": "Ally",
+          "RUSSIA": "Enemy",
+          "ITALY": "Unfriendly",
+          "ENGLAND": "Friendly",
+          "GERMANY": "Neutral",
+          "FRANCE": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "RUM"
+          }
+        ],
+        "intended_orders": [
+          "A SER S A BUL - RUM",
+          "A BUD S A BUL - RUM",
+          "F GRE H",
+          "F TRI - ALB",
+          "A VIE - GAL"
+        ]
+      }
+    }
+  ]
+}

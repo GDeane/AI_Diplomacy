@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "ENGLAND",
+    "target_power": "FRANCE",
+    "probe_type": "A",
+    "models": [
+      "baseline_neutral_random"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:26:23.973045+00:00",
+    "parser_model": "baseline",
+    "parsed_at": "baseline"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Friendly",
+      "TURKEY": "Neutral",
+      "ENGLAND": "Enemy",
+      "AUSTRIA": "Friendly",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "BUR"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "ENG"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "GOL"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "TYS"
+      }
+    ],
+    "intended_orders": [
+      "F BRE - ENG",
+      "A PIC - BEL",
+      "A PAR - PIC",
+      "F POR - MAO",
+      "A SPA - GAS"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - ENG",
+          "A PAR S A RUH - BUR",
+          "A PIC - BEL",
+          "F POR S A SPA",
+          "A SPA - GAS"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE S F POR - MAO",
+          "A PAR - BUR",
+          "A PIC S A PAR",
+          "F POR H",
+          "A SPA S F BRE - GAS"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE S A PIC",
+          "A PAR S A RUH - BUR",
+          "A PIC S A BEL",
+          "F POR S A SPA",
+          "A SPA S F POR"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - PIC",
+          "A PAR S A PIC - BUR",
+          "A PIC S F BRE",
+          "F POR - MAO",
+          "A SPA S A PAR - GAS"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - PIC",
+          "A PAR S F BRE",
+          "A PIC S A RUH - BUR",
+          "F POR H",
+          "A SPA H"
+        ]
+      }
+    }
+  ]
+}

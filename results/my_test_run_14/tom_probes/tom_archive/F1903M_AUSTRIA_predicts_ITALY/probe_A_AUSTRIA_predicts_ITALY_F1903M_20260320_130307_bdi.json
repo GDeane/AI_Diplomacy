@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "F1903M",
+    "predictor_power": "AUSTRIA",
+    "target_power": "ITALY",
+    "probe_type": "A",
+    "models": [
+      "gemini-3.1-pro-preview",
+      "openrouter-anthropic/claude-opus-4.6",
+      "openrouter-openai/gpt-5.4"
+    ],
+    "num_predictions": 3,
+    "timestamp": "2026-03-20T17:03:07.056653+00:00",
+    "parser_model": "gemini-3.1-pro-preview",
+    "parsed_at": "2026-03-20T17:30:04.465409+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "TURKEY": "Enemy",
+      "ENGLAND": "Friendly",
+      "FRANCE": "Enemy",
+      "AUSTRIA": "Ally",
+      "RUSSIA": "Ally",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "AUSTRIA",
+        "type": "move",
+        "region": "SMY"
+      },
+      {
+        "counterparty": "AUSTRIA",
+        "type": "move",
+        "region": "EAS"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "SMY"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "EAS"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "TUN"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "VEN"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "LYO"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "LYO"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "BUR"
+      }
+    ],
+    "intended_orders": [
+      "A SMY H",
+      "F EAS S A SMY",
+      "F TYS - LYO",
+      "A VEN - PIE"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "TURKEY": "Enemy",
+          "RUSSIA": "Friendly",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ENGLAND": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "SMY"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "BUL"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "dmz",
+            "region": "VEN"
+          }
+        ],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "A VEN H",
+          "F TYS H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Friendly",
+          "TURKEY": "Enemy"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "SMY"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "BUL"
+          }
+        ],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "TURKEY": "Enemy",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "RUSSIA": "Ally",
+          "GERMANY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "TURKEY": "Enemy",
+          "RUSSIA": "Friendly",
+          "GERMANY": "Neutral",
+          "FRANCE": "Neutral",
+          "ENGLAND": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "SMY"
+          }
+        ],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS - ION",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "TURKEY": "Enemy",
+          "RUSSIA": "Friendly",
+          "FRANCE": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "SMY"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "support",
+            "region": "EAS"
+          }
+        ],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "TURKEY": "Enemy",
+          "RUSSIA": "Friendly",
+          "GERMANY": "Neutral",
+          "FRANCE": "Neutral",
+          "ENGLAND": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "SMY"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "EAS"
+          }
+        ],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Ally",
+          "RUSSIA": "Friendly",
+          "TURKEY": "Enemy"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "split",
+            "region": "BUL, SMY"
+          }
+        ],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Unfriendly",
+          "GERMANY": "Neutral",
+          "ITALY": "Ally",
+          "RUSSIA": "Friendly",
+          "TURKEY": "Enemy"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Friendly",
+          "ITALY": "Ally",
+          "RUSSIA": "Friendly",
+          "TURKEY": "Enemy"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,769 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1904M",
+    "predictor_power": "ITALY",
+    "target_power": "AUSTRIA",
+    "probe_type": "B",
+    "models": [
+      "baseline_neutral_random"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:53:01.978666+00:00",
+    "parser_model": "baseline",
+    "parsed_at": "baseline"
+  },
+  "per_prediction": [
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 0,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "TURKEY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 1.3333,
+          "normalized_accuracy": 0.6667,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A BUD S A VIE",
+            "A BUL - CON",
+            "A TRI - VEN",
+            "A VIE S A BUD",
+            "F AEG S A BUL - CON",
+            "F GRE - ION"
+          ],
+          "pred_orders": [
+            "A BUD S F SEV - RUM",
+            "A BUL - SMY",
+            "A TRI S A BUD - SER",
+            "A VIE S A TRI - TYR",
+            "F AEG S F GRE - BUL/SC",
+            "F GRE S A SMY - BUL"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "destination_accuracy": 0.0
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 1,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "TURKEY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 1.3333,
+          "normalized_accuracy": 0.6667,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A BUD S A VIE",
+            "A BUL - CON",
+            "A TRI - VEN",
+            "A VIE S A BUD",
+            "F AEG S A BUL - CON",
+            "F GRE - ION"
+          ],
+          "pred_orders": [
+            "A BUD - VIE",
+            "A BUL - GRE",
+            "A TRI S A PIE - VEN",
+            "A VIE H",
+            "F AEG C A SMY - BUL",
+            "F GRE S F EAS - AEG"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "destination_accuracy": 0.3333
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 2,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "TURKEY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 1.3333,
+          "normalized_accuracy": 0.6667,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A BUD S A VIE",
+            "A BUL - CON",
+            "A TRI - VEN",
+            "A VIE S A BUD",
+            "F AEG S A BUL - CON",
+            "F GRE - ION"
+          ],
+          "pred_orders": [
+            "A BUD - TRI",
+            "A BUL - CON",
+            "A TRI S A VIE - TYR",
+            "A VIE - TRI",
+            "F AEG C A CON - BUL",
+            "F GRE - ION"
+          ],
+          "exact_matches": [
+            "A BUL - CON",
+            "F GRE - ION"
+          ],
+          "exact_jaccard": 0.2,
+          "destination_accuracy": 0.3333
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 3,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "TURKEY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 1.3333,
+          "normalized_accuracy": 0.6667,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A BUD S A VIE",
+            "A BUL - CON",
+            "A TRI - VEN",
+            "A VIE S A BUD",
+            "F AEG S A BUL - CON",
+            "F GRE - ION"
+          ],
+          "pred_orders": [
+            "A BUD - RUM",
+            "A BUL S A SMY - CON",
+            "A TRI S F GRE - ALB",
+            "A VIE - TYR",
+            "F AEG S A ARM - SMY",
+            "F GRE S F EAS - ION"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "destination_accuracy": 0.3333
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 4,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            },
+            "FRANCE": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "RUSSIA": {
+              "gt": "Ally",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "TURKEY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 1.3333,
+          "normalized_accuracy": 0.6667,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A BUD S A VIE",
+            "A BUL - CON",
+            "A TRI - VEN",
+            "A VIE S A BUD",
+            "F AEG S A BUL - CON",
+            "F GRE - ION"
+          ],
+          "pred_orders": [
+            "A BUD - SER",
+            "A BUL S A CON",
+            "A TRI S A PIE - TYR",
+            "A VIE S A BUD - TRI",
+            "F AEG S F GRE - BUL",
+            "F GRE S A BUL"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "destination_accuracy": 0.1667
+        },
+        "agreements_bilateral": {
+          "gt_set": [],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "FRANCE",
+              "move",
+              "VEN"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "NORTHERN"
+            ],
+            [
+              "RUSSIA",
+              "support",
+              "CON"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ITALY": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "relationship_accuracy": {
+      "mean": 0.6667,
+      "per_run": [
+        0.6667,
+        0.6667,
+        0.6667,
+        0.6667,
+        0.6667
+      ]
+    },
+    "agreement_all_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "order_exact_jaccard": {
+      "mean": 0.04,
+      "per_run": [
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+        0.0
+      ]
+    },
+    "order_destination_accuracy": {
+      "mean": 0.2333,
+      "per_run": [
+        0.0,
+        0.3333,
+        0.3333,
+        0.3333,
+        0.1667
+      ]
+    },
+    "agreement_bilateral_jaccard": {
+      "mean": 1.0,
+      "per_run": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "agreement_third_party_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "relationship_bilateral_accuracy": {
+      "mean": 0.5,
+      "per_run": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

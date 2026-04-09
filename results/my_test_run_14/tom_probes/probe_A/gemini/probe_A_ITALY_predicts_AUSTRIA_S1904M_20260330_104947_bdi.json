@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1904M",
+    "predictor_power": "ITALY",
+    "target_power": "AUSTRIA",
+    "probe_type": "A",
+    "models": [
+      "gemini-3.1-pro-preview"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:49:47.397302+00:00",
+    "parser_model": "gemini-3.1-pro-preview",
+    "parsed_at": "2026-03-30T15:08:43.558382+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Enemy",
+      "TURKEY": "Enemy",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Friendly",
+      "RUSSIA": "Ally",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "RUSSIA",
+        "type": "support",
+        "region": "CON"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": ""
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "support",
+        "region": "CON"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "move",
+        "region": "SER"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "VEN"
+      }
+    ],
+    "intended_orders": [
+      "A BUL - CON",
+      "F AEG S A BUL - CON",
+      "A TRI - VEN",
+      "F GRE - ION",
+      "A VIE S A BUD",
+      "A BUD S A VIE"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ITALY": "Friendly",
+          "RUSSIA": "Unfriendly",
+          "TURKEY": "Enemy",
+          "FRANCE": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A BUL - CON",
+          "F AEG S A BUL - CON",
+          "F GRE H",
+          "A TRI - SER",
+          "A BUD - GAL",
+          "A VIE S A BUD - GAL"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ITALY": "Enemy",
+          "FRANCE": "Friendly",
+          "RUSSIA": "Ally",
+          "GERMANY": "Neutral",
+          "ENGLAND": "Neutral",
+          "TURKEY": "Enemy"
+        },
+        "agreements": [
+          {
+            "counterparty": "ITALY",
+            "type": "move",
+            "region": "SER"
+          },
+          {
+            "counterparty": "RUSSIA",
+            "type": "non_aggression",
+            "region": ""
+          }
+        ],
+        "intended_orders": [
+          "A TRI - VEN",
+          "A VIE - TYR",
+          "A BUD - SER",
+          "F GRE - ION",
+          "F AEG S A BUL - CON",
+          "A BUL - CON"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ITALY": "Enemy",
+          "RUSSIA": "Ally",
+          "TURKEY": "Enemy",
+          "FRANCE": "Friendly",
+          "GERMANY": "Neutral",
+          "ENGLAND": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A TRI - VEN",
+          "F GRE - ION",
+          "A BUL - CON",
+          "F AEG S A BUL - CON",
+          "A BUD - SER",
+          "A VIE - TRI"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ITALY": "Ally",
+          "RUSSIA": "Unfriendly",
+          "TURKEY": "Enemy",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ITALY",
+            "type": "dmz",
+            "region": "VEN"
+          }
+        ],
+        "intended_orders": [
+          "A BUL - CON",
+          "F AEG S A BUL - CON",
+          "A TRI - SER",
+          "A BUD - GAL",
+          "A VIE S A BUD - GAL",
+          "F GRE H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ITALY": "Ally",
+          "RUSSIA": "Unfriendly",
+          "TURKEY": "Enemy",
+          "FRANCE": "Neutral",
+          "ENGLAND": "Neutral",
+          "GERMANY": "Friendly"
+        },
+        "agreements": [
+          {
+            "counterparty": "RUSSIA",
+            "type": "support",
+            "region": "CON"
+          }
+        ],
+        "intended_orders": [
+          "A BUL - CON",
+          "F AEG S A BUL - CON",
+          "A TRI - SER",
+          "A VIE - GAL",
+          "A BUD S A VIE - GAL",
+          "F GRE H"
+        ]
+      }
+    }
+  ]
+}

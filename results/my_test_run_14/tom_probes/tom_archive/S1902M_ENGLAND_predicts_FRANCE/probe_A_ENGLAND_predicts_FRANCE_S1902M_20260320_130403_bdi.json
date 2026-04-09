@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "ENGLAND",
+    "target_power": "FRANCE",
+    "probe_type": "A",
+    "models": [
+      "gemini-3.1-pro-preview",
+      "openrouter-anthropic/claude-opus-4.6",
+      "openrouter-openai/gpt-5.4"
+    ],
+    "num_predictions": 3,
+    "timestamp": "2026-03-20T17:04:03.684069+00:00",
+    "parser_model": "gemini-3.1-pro-preview",
+    "parsed_at": "2026-03-20T17:29:59.171261+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Friendly",
+      "TURKEY": "Neutral",
+      "ENGLAND": "Enemy",
+      "AUSTRIA": "Friendly",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "NWG"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "NTH"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "SKA"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "BEL"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "BUR"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "MAO"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "BUR"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "ENG"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "GOL"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "dmz",
+        "region": "TYS"
+      }
+    ],
+    "intended_orders": [
+      "F BRE - ENG",
+      "A PIC - BEL",
+      "A PAR - PIC",
+      "F POR - MAO",
+      "A SPA - GAS"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Ally",
+          "GERMANY": "Enemy",
+          "ITALY": "Unfriendly",
+          "RUSSIA": "Neutral",
+          "AUSTRIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F POR - SPA/SC",
+          "A SPA - MAR"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Ally",
+          "GERMANY": "Enemy",
+          "ITALY": "Neutral",
+          "AUSTRIA": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "MAO"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "dmz",
+            "region": "ENG"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "support",
+            "region": "BEL"
+          }
+        ],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F POR S F BRE - MAO",
+          "A SPA H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Ally",
+          "GERMANY": "Enemy",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "NWG"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "SKA"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "NTH"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "support",
+            "region": "BEL"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "MAO"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "dmz",
+            "region": "ECH"
+          }
+        ],
+        "intended_orders": [
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F BRE - MAO",
+          "A SPA - MAR",
+          "F POR - SPA/SC"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Ally",
+          "GERMANY": "Unfriendly",
+          "RUSSIA": "Neutral",
+          "ITALY": "Neutral",
+          "AUSTRIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F BRE - MAO",
+          "F POR S F BRE - MAO",
+          "A SPA - GAS"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Ally",
+          "GERMANY": "Unfriendly",
+          "ITALY": "Neutral",
+          "AUSTRIA": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A PAR - BUR",
+          "A PIC S A BEL",
+          "F BRE - MAO",
+          "F POR S F BRE - MAO",
+          "A SPA - GAS"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Ally",
+          "GERMANY": "Unfriendly",
+          "RUSSIA": "Neutral",
+          "ITALY": "Neutral",
+          "AUSTRIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ENGLAND",
+            "type": "dmz",
+            "region": "ENG"
+          }
+        ],
+        "intended_orders": [
+          "A PAR - BUR",
+          "A PIC S A PAR - BUR",
+          "F BRE - MAO",
+          "F POR S F BRE - MAO",
+          "A SPA - GAS"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Ally",
+          "GERMANY": "Enemy",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ENGLAND",
+            "type": "dmz",
+            "region": "ENG"
+          }
+        ],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A PAR - BUR",
+          "F POR H",
+          "A SPA H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Ally",
+          "FRANCE": "Ally",
+          "GERMANY": "Enemy",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ENGLAND",
+            "type": "dmz",
+            "region": "ENG"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "MAO"
+          }
+        ],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A PAR - BUR",
+          "F POR H",
+          "A SPA H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Ally",
+          "GERMANY": "Unfriendly",
+          "ITALY": "Neutral",
+          "AUSTRIA": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "ENGLAND",
+            "type": "dmz",
+            "region": "ENG"
+          },
+          {
+            "counterparty": "ENGLAND",
+            "type": "move",
+            "region": "MAO"
+          }
+        ],
+        "intended_orders": [
+          "F BRE - MAO",
+          "A PAR - BUR",
+          "A PIC S A PAR - BUR",
+          "F POR S F BRE - MAO",
+          "A SPA H"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "TURKEY",
+    "target_power": "AUSTRIA",
+    "probe_type": "A",
+    "models": [
+      "openrouter-openai/gpt-5.4"
+    ],
+    "num_predictions": 3,
+    "timestamp": "2026-03-23T19:17:15.973174+00:00",
+    "parser_model": "gemini-2.5-flash",
+    "parsed_at": "2026-03-23T19:24:32.803835+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Ally",
+      "TURKEY": "Enemy",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Neutral",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "BOH"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": "TYR"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "dmz",
+        "region": "GAL"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "convoy",
+        "region": "TUN"
+      }
+    ],
+    "intended_orders": [
+      "F GRE - AEG",
+      "F TRI - ALB",
+      "A SER - BUL",
+      "A BUD S A VIE",
+      "A VIE S A BUD"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "ENGLAND": "Friendly",
+          "FRANCE": "Neutral",
+          "GERMANY": "Friendly",
+          "ITALY": "Friendly",
+          "RUSSIA": "Enemy",
+          "TURKEY": "Ally"
+        },
+        "agreements": [
+          {
+            "counterparty": "TURKEY",
+            "type": "non_aggression",
+            "region": ""
+          },
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "ROM"
+          }
+        ],
+        "intended_orders": [
+          "A BUD S A BUL - RUM",
+          "F GRE H",
+          "A SER S A BUL - RUM",
+          "F TRI - ALB",
+          "A VIE H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "TURKEY": "Ally",
+          "RUSSIA": "Enemy",
+          "ITALY": "Friendly",
+          "ENGLAND": "Friendly",
+          "GERMANY": "Neutral",
+          "FRANCE": "Neutral"
+        },
+        "agreements": [
+          {
+            "counterparty": "TURKEY",
+            "type": "non_aggression",
+            "region": ""
+          },
+          {
+            "counterparty": "TURKEY",
+            "type": "dmz",
+            "region": "ION"
+          }
+        ],
+        "intended_orders": [
+          "A BUD S A BUL - RUM",
+          "F GRE H",
+          "A SER S A BUL - RUM",
+          "F TRI - ALB",
+          "A VIE H"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Ally",
+          "ENGLAND": "Friendly",
+          "FRANCE": "Neutral",
+          "GERMANY": "Friendly",
+          "ITALY": "Friendly",
+          "RUSSIA": "Enemy",
+          "TURKEY": "Ally"
+        },
+        "agreements": [
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "RUM"
+          },
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "RUM"
+          },
+          {
+            "counterparty": "TURKEY",
+            "type": "support",
+            "region": "RUM"
+          }
+        ],
+        "intended_orders": [
+          "A BUD S A BUL - RUM",
+          "F GRE H",
+          "A SER S A BUL - RUM",
+          "F TRI - ALB",
+          "A VIE - GAL"
+        ]
+      }
+    }
+  ]
+}

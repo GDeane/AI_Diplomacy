@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1904M",
+    "predictor_power": "ITALY",
+    "target_power": "AUSTRIA",
+    "probe_type": "A",
+    "models": [
+      "baseline_neutral_random"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:50:10.422356+00:00",
+    "parser_model": "baseline",
+    "parsed_at": "baseline"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "ITALY": "Enemy",
+      "TURKEY": "Enemy",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Friendly",
+      "RUSSIA": "Ally",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "RUSSIA",
+        "type": "support",
+        "region": "CON"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "dmz",
+        "region": ""
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "support",
+        "region": "CON"
+      },
+      {
+        "counterparty": "ITALY",
+        "type": "move",
+        "region": "SER"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "VEN"
+      }
+    ],
+    "intended_orders": [
+      "A BUL - CON",
+      "F AEG S A BUL - CON",
+      "A TRI - VEN",
+      "F GRE - ION",
+      "A VIE S A BUD",
+      "A BUD S A VIE"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F AEG S F RUM - BUL/EC",
+          "A BUD S A TRI - SER",
+          "A BUL S F GRE",
+          "F GRE S A BUL",
+          "A TRI S A VIE - TYR",
+          "A VIE - BUD"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F AEG S F GRE - BUL",
+          "A BUD S F RUM",
+          "A BUL S A BUD - SER",
+          "F GRE - ALB",
+          "A TRI S A BUD - VIE",
+          "A VIE S A TRI - BUD"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F AEG - CON",
+          "A BUD S A TRI - VIE",
+          "A BUL - CON",
+          "F GRE S A CON - BUL",
+          "A TRI S A PIE - VEN",
+          "A VIE S A MUN - TYR"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F AEG S A CON",
+          "A BUD - VIE",
+          "A BUL - SER",
+          "F GRE S F AEG - ION",
+          "A TRI S A PIE - TYR",
+          "A VIE S A TRI - BUD"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "ITALY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F AEG S F GRE - BUL",
+          "A BUD S A TRI - SER",
+          "A BUL S A TRI - SER",
+          "F GRE - BUL/SC",
+          "A TRI S F GRE - ALB",
+          "A VIE S A TRI - TYR"
+        ]
+      }
+    }
+  ]
+}

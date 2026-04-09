@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_4/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_4",
+    "phase": "F1901M",
+    "predictor_power": "AUSTRIA",
+    "target_power": "ITALY",
+    "probe_type": "A",
+    "models": [
+      "gemini-3.1-pro-preview"
+    ],
+    "num_predictions": 3,
+    "timestamp": "2026-03-16T20:43:35.170133+00:00",
+    "parser_model": "gemini-2.5-flash",
+    "parsed_at": "2026-03-23T16:06:23.785071+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "AUSTRIA": "Enemy",
+      "FRANCE": "Ally",
+      "TURKEY": "Friendly",
+      "GERMANY": "Ally",
+      "RUSSIA": "Friendly",
+      "ENGLAND": "Neutral"
+    },
+    "agreements": [
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "POR"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "BEL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "SIL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "HOL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "SWE"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "move",
+        "region": "SER"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "support",
+        "region": "SER"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "non_aggression",
+        "region": "GRE"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "move",
+        "region": "ARM"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "RUM"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "UKR"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "LVN"
+      }
+    ],
+    "intended_orders": [
+      "F ION - TUN",
+      "A TYR - TRI",
+      "A APU - VEN"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Friendly",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Unfriendly",
+          "TURKEY": "Unfriendly"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU - TUN VIA",
+          "F ION C A APU - TUN",
+          "A TYR - VEN"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Friendly",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Unfriendly",
+          "TURKEY": "Unfriendly"
+        },
+        "agreements": [
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "ION"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "APU"
+          },
+          {
+            "counterparty": "AUSTRIA",
+            "type": "move",
+            "region": "TYR"
+          }
+        ],
+        "intended_orders": [
+          "A APU - TUN",
+          "F ION C A APU - TUN",
+          "A TYR H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Enemy",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Friendly",
+          "RUSSIA": "Friendly",
+          "TURKEY": "Friendly"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F ION - TUN",
+          "A TYR - TRI",
+          "A APU - VEN"
+        ]
+      }
+    }
+  ]
+}

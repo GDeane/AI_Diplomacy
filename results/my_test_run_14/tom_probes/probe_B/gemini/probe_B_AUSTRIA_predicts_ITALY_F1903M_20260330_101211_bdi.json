@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "F1903M",
+    "predictor_power": "AUSTRIA",
+    "target_power": "ITALY",
+    "probe_type": "B",
+    "models": [
+      "gemini-3.1-pro-preview"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:12:11.469606+00:00",
+    "parser_model": "gemini-3.1-pro-preview",
+    "parsed_at": "2026-03-30T15:20:49.872858+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "TURKEY": "Enemy",
+      "ENGLAND": "Friendly",
+      "FRANCE": "Enemy",
+      "AUSTRIA": "Ally",
+      "RUSSIA": "Ally",
+      "GERMANY": "Friendly"
+    },
+    "agreements": [
+      {
+        "counterparty": "AUSTRIA",
+        "type": "move",
+        "region": "SMY"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "SMY"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "TUN"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "VEN"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "LYO"
+      },
+      {
+        "counterparty": "ENGLAND",
+        "type": "move",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "LYO"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "PIE"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "BUR"
+      }
+    ],
+    "intended_orders": [
+      "A SMY H",
+      "F EAS S A SMY",
+      "F TYS - LYO",
+      "A VEN - PIE"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "A VEN H",
+          "F TYS H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F EAS S A SMY",
+          "A SMY H",
+          "F TYS H",
+          "A VEN H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "A VEN H",
+          "F TYS H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "A VEN H",
+          "F TYS H"
+        ]
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A SMY H",
+          "F EAS S A SMY",
+          "A VEN H",
+          "F TYS H"
+        ]
+      }
+    }
+  ]
+}

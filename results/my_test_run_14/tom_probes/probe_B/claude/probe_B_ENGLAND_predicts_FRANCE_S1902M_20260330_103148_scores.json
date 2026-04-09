@@ -1,0 +1,1017 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "ENGLAND",
+    "target_power": "FRANCE",
+    "probe_type": "B",
+    "models": [
+      "openrouter-anthropic/claude-opus-4.6"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:31:48.485830+00:00",
+    "parser_model": "gemini-3.1-pro-preview",
+    "parsed_at": "2026-03-30T15:20:03.470923+00:00"
+  },
+  "per_prediction": [
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 0,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            }
+          },
+          "mean_distance": 1.0,
+          "normalized_accuracy": 0.75,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A PAR - PIC",
+            "A PIC - BEL",
+            "A SPA - GAS",
+            "F BRE - ENG",
+            "F POR - MAO"
+          ],
+          "pred_orders": [
+            "A PAR - BUR",
+            "A PIC S A PAR - BUR",
+            "A SPA - GAS",
+            "F BRE - MAO",
+            "F POR S F BRE - MAO"
+          ],
+          "exact_matches": [
+            "A SPA - GAS"
+          ],
+          "exact_jaccard": 0.1111,
+          "destination_accuracy": 0.4
+        },
+        "agreements_bilateral": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 1,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            }
+          },
+          "mean_distance": 1.0,
+          "normalized_accuracy": 0.75,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A PAR - PIC",
+            "A PIC - BEL",
+            "A SPA - GAS",
+            "F BRE - ENG",
+            "F POR - MAO"
+          ],
+          "pred_orders": [
+            "A PAR - BUR",
+            "A PIC S A PAR - BUR",
+            "A SPA - MAR",
+            "F BRE - MAO",
+            "F POR S F BRE - MAO"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "destination_accuracy": 0.2
+        },
+        "agreements_bilateral": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 2,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            }
+          },
+          "mean_distance": 1.0,
+          "normalized_accuracy": 0.75,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A PAR - PIC",
+            "A PIC - BEL",
+            "A SPA - GAS",
+            "F BRE - ENG",
+            "F POR - MAO"
+          ],
+          "pred_orders": [
+            "A PAR - BUR",
+            "A PIC S A PAR - BUR",
+            "A SPA H",
+            "F BRE - MAO",
+            "F POR S F BRE - MAO"
+          ],
+          "exact_matches": [],
+          "exact_jaccard": 0.0,
+          "destination_accuracy": 0.2
+        },
+        "agreements_bilateral": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 3,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            }
+          },
+          "mean_distance": 1.0,
+          "normalized_accuracy": 0.75,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A PAR - PIC",
+            "A PIC - BEL",
+            "A SPA - GAS",
+            "F BRE - ENG",
+            "F POR - MAO"
+          ],
+          "pred_orders": [
+            "A PAR - BUR",
+            "A PIC S A BEL",
+            "A SPA - GAS",
+            "F BRE - MAO",
+            "F POR S F BRE - MAO"
+          ],
+          "exact_matches": [
+            "A SPA - GAS"
+          ],
+          "exact_jaccard": 0.1111,
+          "destination_accuracy": 0.6
+        },
+        "agreements_bilateral": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 4,
+      "error": null,
+      "scores": {
+        "relationships": {
+          "per_power": {
+            "AUSTRIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            },
+            "GERMANY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "ITALY": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "RUSSIA": {
+              "gt": "Friendly",
+              "pred": "Neutral",
+              "distance": 1
+            },
+            "TURKEY": {
+              "gt": "Neutral",
+              "pred": "Neutral",
+              "distance": 0
+            }
+          },
+          "mean_distance": 1.0,
+          "normalized_accuracy": 0.75,
+          "exact_matches": 1,
+          "total": 6
+        },
+        "agreements_all": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ],
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "orders": {
+          "gt_orders": [
+            "A PAR - PIC",
+            "A PIC - BEL",
+            "A SPA - GAS",
+            "F BRE - ENG",
+            "F POR - MAO"
+          ],
+          "pred_orders": [
+            "A PAR - BUR",
+            "A PIC S A PAR - BUR",
+            "A SPA - GAS",
+            "F BRE - MAO",
+            "F POR S F BRE - MAO"
+          ],
+          "exact_matches": [
+            "A SPA - GAS"
+          ],
+          "exact_jaccard": 0.1111,
+          "destination_accuracy": 0.4
+        },
+        "agreements_bilateral": {
+          "gt_set": [
+            [
+              "ENGLAND",
+              "move",
+              "NTH"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "NWG"
+            ],
+            [
+              "ENGLAND",
+              "move",
+              "SKA"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "agreements_third_party": {
+          "gt_set": [
+            [
+              "GERMANY",
+              "dmz",
+              "BUR"
+            ],
+            [
+              "GERMANY",
+              "move",
+              "ENG"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "GOL"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "PIE"
+            ],
+            [
+              "ITALY",
+              "dmz",
+              "TYS"
+            ]
+          ],
+          "pred_set": [],
+          "intersection": [],
+          "jaccard": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "relationship_bilateral": {
+          "per_power": {
+            "ENGLAND": {
+              "gt": "Enemy",
+              "pred": "Neutral",
+              "distance": 2
+            }
+          },
+          "mean_distance": 2.0,
+          "normalized_accuracy": 0.5,
+          "exact_matches": 0,
+          "total": 1
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "relationship_accuracy": {
+      "mean": 0.75,
+      "per_run": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "agreement_all_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "order_exact_jaccard": {
+      "mean": 0.0667,
+      "per_run": [
+        0.1111,
+        0.0,
+        0.0,
+        0.1111,
+        0.1111
+      ]
+    },
+    "order_destination_accuracy": {
+      "mean": 0.36,
+      "per_run": [
+        0.4,
+        0.2,
+        0.2,
+        0.6,
+        0.4
+      ]
+    },
+    "agreement_bilateral_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "agreement_third_party_jaccard": {
+      "mean": 0.0,
+      "per_run": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "relationship_bilateral_accuracy": {
+      "mean": 0.5,
+      "per_run": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

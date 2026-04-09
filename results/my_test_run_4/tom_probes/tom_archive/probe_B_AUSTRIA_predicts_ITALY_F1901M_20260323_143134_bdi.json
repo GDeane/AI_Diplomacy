@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_4/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_4",
+    "phase": "F1901M",
+    "predictor_power": "AUSTRIA",
+    "target_power": "ITALY",
+    "probe_type": "B",
+    "models": [
+      "openrouter-anthropic/claude-opus-4.6"
+    ],
+    "num_predictions": 3,
+    "timestamp": "2026-03-23T18:31:34.356388+00:00",
+    "parser_model": "gemini-2.5-flash",
+    "parsed_at": "2026-03-23T18:33:10.902623+00:00"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "AUSTRIA": "Enemy",
+      "FRANCE": "Ally",
+      "TURKEY": "Friendly",
+      "GERMANY": "Ally",
+      "RUSSIA": "Friendly",
+      "ENGLAND": "Neutral"
+    },
+    "agreements": [
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "POR"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "BEL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "SIL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "HOL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "SWE"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "dmz",
+        "region": "GRE"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "move",
+        "region": "SER"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "support",
+        "region": "SER"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "move",
+        "region": "ARM"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "RUM"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "UKR"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "LVN"
+      }
+    ],
+    "intended_orders": [
+      "F ION - TUN",
+      "A TYR - TRI",
+      "A APU - VEN"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU - TUN VIA",
+          "F ION C A APU - TUN",
+          "A TYR - VEN"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU - NAP",
+          "F ION - TUN",
+          "A TYR - VEN"
+        ]
+      }
+    },
+    {
+      "model": "openrouter-anthropic/claude-opus-4.6",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "F ION - TUN",
+          "A APU - NAP",
+          "A TYR - VEN"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_4/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_4",
+    "phase": "F1901M",
+    "predictor_power": "AUSTRIA",
+    "target_power": "ITALY",
+    "probe_type": "B",
+    "models": [
+      "baseline_neutral_random"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:05:31.130715+00:00",
+    "parser_model": "baseline",
+    "parsed_at": "baseline"
+  },
+  "ground_truth_bdi": {
+    "relationships": {
+      "AUSTRIA": "Enemy",
+      "FRANCE": "Ally",
+      "TURKEY": "Friendly",
+      "GERMANY": "Ally",
+      "RUSSIA": "Friendly",
+      "ENGLAND": "Neutral"
+    },
+    "agreements": [
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "POR"
+      },
+      {
+        "counterparty": "FRANCE",
+        "type": "move",
+        "region": "BEL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "SIL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "HOL"
+      },
+      {
+        "counterparty": "GERMANY",
+        "type": "move",
+        "region": "SWE"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "move",
+        "region": "SER"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "dmz",
+        "region": "GRE"
+      },
+      {
+        "counterparty": "TURKEY",
+        "type": "move",
+        "region": "ARM"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "RUM"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "UKR"
+      },
+      {
+        "counterparty": "RUSSIA",
+        "type": "move",
+        "region": "LVN"
+      }
+    ],
+    "intended_orders": [
+      "F ION - TUN",
+      "A TYR - TRI",
+      "A APU - VEN"
+    ]
+  },
+  "parsed_predictions": [
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 0,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU - VEN",
+          "F ION S A SER - GRE",
+          "A TYR S A RUH - MUN"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 1,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU - VEN",
+          "F ION S A APU",
+          "A TYR S A RUH - MUN"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 2,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU S F ION - NAP",
+          "F ION S A SER - GRE",
+          "A TYR S F ALB - TRI"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 3,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU H",
+          "F ION - EAS",
+          "A TYR - VEN"
+        ]
+      }
+    },
+    {
+      "model": "baseline_neutral_random",
+      "run_index": 4,
+      "parse_error": null,
+      "bdi": {
+        "relationships": {
+          "AUSTRIA": "Neutral",
+          "ENGLAND": "Neutral",
+          "FRANCE": "Neutral",
+          "GERMANY": "Neutral",
+          "RUSSIA": "Neutral",
+          "TURKEY": "Neutral"
+        },
+        "agreements": [],
+        "intended_orders": [
+          "A APU - NAP",
+          "F ION S F ALB",
+          "A TYR - BOH"
+        ]
+      }
+    }
+  ]
+}

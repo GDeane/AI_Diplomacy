@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "game_file": "/home/gavin/AI_Diplomacy/results/my_test_run_14/lmvsgame.json",
+    "run_dir": "/home/gavin/AI_Diplomacy/results/my_test_run_14",
+    "phase": "S1902M",
+    "predictor_power": "TURKEY",
+    "target_power": "AUSTRIA",
+    "probe_type": "A",
+    "models": [
+      "openrouter-openai/gpt-5.4"
+    ],
+    "num_predictions": 5,
+    "timestamp": "2026-03-30T14:33:41.892788+00:00"
+  },
+  "prompt_used": "You are playing as TURKEY in a game of Diplomacy.\nCurrent phase: S1902M\n\n== CURRENT GAME STATE ==\nUNIT POSITIONS:\n  AUSTRIA: A SER, A BUD, F GRE, F TRI, A VIE\n  ENGLAND: F NTH, F NWY, A BEL, F EDI, F LON\n  FRANCE: A SPA, A PIC, F POR, F BRE, A PAR\n  GERMANY: F DEN, A RUH, A HOL, F KIE, A MUN\n  ITALY: A VEN, F ION, A TUN, F NAP\n  RUSSIA: A UKR, A SEV, F RUM, F SWE, A MOS, A WAR\n  TURKEY: F BLA, A BUL, A CON, F SMY\n\nSUPPLY CENTERS:\n  AUSTRIA (5): BUD, GRE, SER, TRI, VIE\n  ENGLAND (5): BEL, EDI, LON, LVP, NWY\n  FRANCE (5): BRE, MAR, PAR, POR, SPA\n  GERMANY (5): BER, DEN, HOL, KIE, MUN\n  ITALY (4): NAP, ROM, TUN, VEN\n  RUSSIA (6): MOS, RUM, SEV, STP, SWE, WAR\n  TURKEY (4): ANK, BUL, CON, SMY\n\n== YOUR PRIVATE DIARY ==\n[S1901M] Formed a strong alliance with Austria against Russia; Austria is opening BUD-SER and TRI-ALB. Successfully deceived Russia into agreeing to a Black Sea DMZ (they plan to move SEV-RUM), which I will violate to sneak into BLA. Agreed to an Eastern Mediterranean DMZ with Italy. Established friendly, intelligence-sharing relationships with Germany and England, both of whom are supportive of containing Russia.\nIntent: Order F ANK - BLA (betraying the DMZ agreement with Russia), A CON - BUL, and A SMY - CON to follow up and support the Balkan push.\n\n[S1901M] The Spring 1901 phase went exactly according to plan. My alliance with Austria proved solid, as they executed their promised Balkan opening (SER, ALB, BUD) flawlessly. Meanwhile, my deception against Russia was a complete success: I violated our agreed DMZ and slipped F ANK into the Black Sea (BLA) while they moved F SEV to RUM and A MOS to SEV. Italy also respected our Eastern Mediterranean DMZ, moving to ION and APU instead.\n\nMy strategic position is now incredibly strong. Controlling BLA and BUL gives me immense leverage over Russia in the upcoming Fall phase. Austria has proven to be a highly trustworthy ally, and Italy appears reliable for now. Russia is now a confirmed enemy, but they are on the back foot. My next step is to coordinate with Austria to strike RUM or SEV, secure my build in BUL, and maintain friendly relations with Italy to keep my western flank secure.\n\n[F1901M] Successfully coordinated with Austria for a joint effort against Russia. Austria will order F ALB - GRE (supported by SER) and hold BUD. I have agreed with Austria to attack RUM (A BUL - RUM supported by F BLA) and follow up with A CON - BUL. I deceived Russia by apologizing for the Spring BLA move and promising to retreat F BLA to ANK, while Russia stated they will hold RUM with support. Maintained friendly relations and DMZ agreements with Italy (who is convoying to Tunis) and established good rapport with England and Germany for future containment of Russia.\nIntent: Order A BUL - RUM supported by F BLA, and A CON - BUL. This fulfills my agreement with Austria to pressure Russia and completely violates my false promise to Russia to retreat F BLA to ANK.\n\n[F1901M] The Fall 1901 phase solidified the battle lines in the East. As planned, I attacked Rumania with support from the Black Sea, completely ignoring my false promise to Russia. However, Russia anticipated the betrayal and heavily defended Rumania with both Sevastopol and Ukraine, resulting in a bounce. Consequently, my army in Constantinople also bounced trying to enter Bulgaria. Despite this tactical stalemate, I successfully secured Bulgaria for a build.\n\nAustria executed their moves perfectly, taking Greece and securing their position in the Balkans. Our alliance remains strong and vital. Italy also kept their word, convoying to Tunis and respecting our Eastern Mediterranean DMZ. \n\nRussia is proving to be a resilient enemy. To break their defensive line in 1902, I must coordinate joint attacks with Austria, leveraging our combined forces against Rumania or Sevastopol. I will build to reinforce my front lines and continue diplomatic outreach to Germany and England to pressure Russia's northern flank.\n\n== YOUR STRATEGIC STATE ==\nGoals:\n- Secure Bulgaria and attempt to dislodge or bounce Russia in Rumania\n- Maintain strong alliance with Austria to dominate the Balkans and crush Russia\n- Maintain a demilitarized Eastern Mediterranean with Italy\n- Coordinate with England and Germany for a multi-front war against Russia in 1902\n\nRelationships:\n- ITALY: Friendly\n- ENGLAND: Friendly\n- FRANCE: Neutral\n- AUSTRIA: Ally\n- RUSSIA: Enemy\n- GERMANY: Friendly\n\n== YOUR NEGOTIATIONS THIS PHASE ==\n[AUSTRIA -> TURKEY]: Ah, it seems Russia was tipped off or guessed correctly about Romania. No matter, we can still break them. I built F TRI to defend against a potential Italian stab, but my armies are ready to help you. I can move A SER - RUM to cut support or attack. What are your plans for this Spring?\n[ENGLAND -> TURKEY]: Hello Turkey! I see you're engaging with Russia in the south. I'm currently positioning my new fleets and might be able to start applying pressure on Russia in the north later this year or next. Let's keep coordinating!\n[GERMANY -> TURKEY]: Hi Turkey, it looks like Russia had a very strong 1901. I'm dealing with a potential Anglo-French alliance in the West, but I'm keeping an eye on the East. Let me know if you need any coordination against Russia.\n[ITALY -> TURKEY]: Hello Turkey, I hope things are going well. I'm a bit worried about France's growth, so I'm moving F NAP - TYS to secure my western flank. I'll be keeping F ION back as well and staying out of the East Med as promised. Best of luck against Russia!\n[RUSSIA -> TURKEY]: Turkey, we got off on the wrong foot. I am willing to call a truce if you withdraw F BLA to ANK and A BUL to CON. Otherwise, you will face the combined might of Russia, Austria, and Italy. The choice is yours.\n[TURKEY -> AUSTRIA]: Greetings my friend! The Spring phase is upon us. Russia is heavily defending Rumania, but together we can break them. If you support my attack on Rumania (A BUL - RUM) with your armies in Serbia and Budapest, we will have 4 strength against their maximum of 3. Alternatively, I can support your attack on Rumania if you prefer to take it. What are your thoughts? Also, I'll be moving F SMY to CON to get it into the fight against Russia. Let's crush them this year!\n[TURKEY -> ITALY]: Hello Italy, congratulations on securing Tunis! I just wanted to touch base and reaffirm our Eastern Med DMZ. I'll be moving my new fleet in Smyrna to Constantinople to reinforce the Black Sea against Russia. The Eastern Med remains completely demilitarized on my end. Wishing you the best of luck this year!\n[TURKEY -> ENGLAND]: Greetings England! Excellent work securing Norway and Belgium. Russia is completely distracted in the south, pouring all their units into defending Rumania and Sevastopol. This leaves St. Petersburg and Sweden very vulnerable to you. I'll keep the pressure on them down here so you can advance in the north!\n[TURKEY -> GERMANY]: Greetings Germany! Well played in 1901. Russia is entirely focused on the south right now, defending against a joint Austro-Turkish push. Their northern flank is exposed. If you're looking to expand towards Warsaw or Sweden, you won't find a better opportunity. Let me know your thoughts!\n[AUSTRIA -> TURKEY]: My friend, this is a brilliant plan. I will order A SER S A BUL - RUM and A BUD S A BUL - RUM. With my 2 supports and your F BLA support, we will easily crush their defense. I am also going to order F GRE - ION to bounce Italy, as I suspect they might try to move F NAP - ION. My new F TRI will move to ALB to back up Greece. Let's break Russia this year!\n[ENGLAND -> TURKEY]: Hello Turkey! You are absolutely right. Russia's focus on the south gives me a great opportunity. I am moving my fleets north this Spring to prepare an attack on St. Petersburg. Keep hitting them hard!\n[GERMANY -> TURKEY]: Greetings Turkey, thanks for the heads up! I am currently bogged down trying to navigate the Anglo-French dynamic in the west, but if an opportunity arises to grab Sweden or put pressure on Warsaw, I will definitely consider it. Good luck with your push against Russia!\n[ITALY -> TURKEY]: Hello Turkey, thanks for the update! Germany actually just warned me about France and England working together, so I am definitely moving F NAP to TYS to guard my western flank. F ION will hold. The East Med DMZ remains secure. Good luck with Russia!\n[TURKEY -> GERMANY]: Thanks for the update, Germany. If England and France are teaming up, you might need to secure your eastern flank quickly or find a way to break their alliance. Russia is pouring everything into defending Rumania and Sevastopol against Austria and me. If you can slip into Warsaw or pressure Sweden, it would force Russia to split their forces, helping both of us. Let me know if you want to coordinate timing!\n[TURKEY -> ITALY]: That sounds like a solid plan, Italy. France can definitely be a menace if left unchecked, so securing the Tyrrhenian Sea is a smart move. I confirm the East Med remains completely demilitarized on my end. I'm moving F SMY to CON to reinforce the Black Sea. Best of luck with your western campaign!\n[TURKEY -> RUSSIA]: Russia, threats won't get us anywhere. I am well aware of the diplomatic landscape, and I know that Austria and Italy are not aligning with you. However, I am a pragmatist. If you are truly open to a truce, we need a mutually beneficial arrangement, not just me retreating and leaving myself vulnerable. What are you willing to offer in exchange for peace?\n[TURKEY -> AUSTRIA]: Austria, Russia just messaged me claiming that you and Italy are teaming up with them against me! I assume this is a desperate bluff on their part to sow discord between us. Let's stick to our plan and crush them. Let me know if you prefer to take RUM or support me into it this Spring.\n[AUSTRIA -> TURKEY]: My friend, Russia is absolutely terrified and grasping at straws! They know they are dead if we work together, so they are trying to drive a wedge between us. Don't listen to their lies. Let's stick to the plan: I will order A SER S A BUL - RUM and A BUD S A BUL - RUM. With your F BLA supporting, that's 4 strength. They can't hold it. I'm also moving F GRE - ION to bounce Italy, and F TRI - ALB. Let's crush Russia!\n[GERMANY -> TURKEY]: Hi Turkey, I appreciate the strategic advice! Right now, England's 4 fleets are forcing me to play defensively in the West. I can't afford to open a second front against Russia just yet, but if England and France turn on each other, I might have the breathing room to look East. Best of luck with your campaign!\n[ITALY -> TURKEY]: Thanks Turkey! I appreciate the transparency. Good luck holding off Russia, I'll be busy fortifying the west.\n[RUSSIA -> TURKEY]: Turkey, I appreciate your pragmatism. The truth is, I am growing concerned about Austria's rapid expansion and their control of the Balkans. If you are willing to move F BLA to CON or ANK, I will move my armies towards Galicia and we can coordinate against Austria. I can even support you into Serbia or Greece in the Fall if we establish trust now. Let me know if this interests you.\n[TURKEY -> ENGLAND]: Excellent news, England! With Russia's forces entirely tied up defending Rumania and Sevastopol against the combined Austro-Turkish assault, St. Petersburg should be ripe for the taking. I will ensure they cannot spare a single unit to send north. Best of luck with your naval campaign!\n[TURKEY -> GERMANY]: Understood, Germany. An Anglo-French alliance is definitely a major threat that needs your full attention. If you can spare even a single unit to feint towards Warsaw or Silesia, it would cause panic in Moscow and help us both. Regardless, I'll keep the pressure on Russia in the south. Good luck defending the Fatherland!\n[TURKEY -> ITALY]: Thanks for the confirmation, Italy. Moving to TYS is a very wise precaution against a potential French naval threat. I am ordering F SMY - CON as planned, keeping the East Med completely clear. Best of luck securing your western waters!\n[TURKEY -> AUSTRIA]: My friend, I have some valuable intelligence. Italy has confirmed to me that they are moving F NAP to TYS to defend against a growing French threat, and they plan to simply hold F ION. If you move F GRE - ION, it will bounce their hold and might unnecessarily provoke them into a conflict while we are busy with Russia. Perhaps F GRE could hold or support? \n\nRegardless, I am locking in our plan: A BUL - RUM supported by your A SER and A BUD, with my F BLA also supporting. I will move F SMY - CON and A CON - BUL to reinforce the front. Let's crush them!\n[AUSTRIA -> TURKEY]: Thank you for the warning about Italy! You are absolutely right, there is no need to provoke them if they are just holding and looking West. I will order F GRE to hold instead so we don't cause any unnecessary alarm. I am locking in A SER S A BUL - RUM and A BUD S A BUL - RUM. With your F BLA support, Russia's defenses will shatter. Let's break them this Spring!\n[ENGLAND -> TURKEY]: Hello Turkey! The plan is in motion. I am moving my fleets to the Barents Sea, Norwegian Sea, and Skagerrak to completely surround St. Petersburg and Sweden. Keep hitting them hard in the south so they can't build in the north!\n[GERMANY -> TURKEY]: Thanks Turkey. I'll see if I can spare a unit to feint towards Silesia, but I have to be very careful not to overextend while England and France are allied. Give them hell in the south!\n[ITALY -> TURKEY]: Perfect. F NAP - TYS and F ION H are locked in. Give Russia hell!\n[TURKEY -> GERMANY]: Understood, Germany. Defending your homeland is the top priority. I'll keep Russia fully occupied in the East so they can't bother you. Let me know if the situation in the West changes or if you need any diplomatic help!\n[TURKEY -> ITALY]: Thanks Italy! I appreciate the transparency. F SMY is heading to CON, so the East Med is completely clear. Best of luck fortifying the West!\n[TURKEY -> RUSSIA]: Russia, I am willing to take this risk if it means stopping Austria from dominating the Balkans. I will order F BLA - ANK and A BUL H this Spring. In return, I need to see you move A UKR - GAL and shift your forces away from my borders to prove your commitment. If you do this, we can coordinate against Serbia or Greece in the Fall. Let me know if we have a deal.\n[TURKEY -> AUSTRIA]: Austria, Russia is desperately trying to turn me against you. They offered to support me into Serbia or Greece if I retreat from the Black Sea! I'm telling them I agree and asking them to move A UKR - GAL to 'prove their commitment'. Hopefully, this tricks them into abandoning RUM's defense. I am 100% locked in on our plan: A BUL - RUM supported by your SER and BUD, and my BLA. F SMY - CON and A CON - BUL as well. Let's destroy them!\n[AUSTRIA -> TURKEY]: Haha, that is absolutely brilliant! If they actually move UKR - GAL, they will be completely out of position to defend RUM, and we will walk right in. I am 100% locked in on our plan: A SER S A BUL - RUM, A BUD S A BUL - RUM, F GRE H, and F TRI - ALB. Let's shatter their defenses this Spring!\n[GERMANY -> TURKEY]: Thanks Turkey! I appreciate the support. I'll do my best to hold the line here. Give Russia hell!\n[ITALY -> TURKEY]: Thanks Turkey! F NAP - TYS and F ION H are locked in. Give Russia hell in the Black Sea! Let me know how the northern front goes.\n[RUSSIA -> TURKEY]: Turkey, we have a deal. I will order A UKR - GAL and A SEV - UKR this Spring to shift my forces westward against Austria. I trust you will follow through with F BLA - ANK and A BUL H. Let's turn the tables on Austria.\n[TURKEY -> ENGLAND]: Excellent news, England! Austria and I are launching a massive coordinated strike on Rumania this Spring that Russia cannot mathematically defend. With their forces crumbling in the south, St. Petersburg and Sweden will be yours for the taking. Best of luck with your naval maneuvers!\n[TURKEY -> GERMANY]: Understood, Germany. Just a heads up, England has informed me they are sending fleets to the Barents, Norwegian Sea, and Skagerrak to attack Russia. This might mean they are less focused on you than you think! Regardless, Austria and I are crushing Russia in Rumania this Spring. Good luck!\n[TURKEY -> ITALY]: Excellent. F SMY - CON is locked in on my end. The East Med remains completely clear. Best of luck securing your western flank!\n[TURKEY -> AUSTRIA]: My friend, everything is locked in. A BUL - RUM supported by your A SER and A BUD, and my F BLA. I am also moving F SMY - CON and A CON - BUL. I have continued the ruse with Russia, promising to retreat F BLA to ANK. Hopefully, they fall for it and move A UKR - GAL, making our attack even more devastating. Let's crush them!\n[TURKEY -> RUSSIA]: Russia, we have a deal. I am ordering F BLA - ANK and A BUL H this Spring. I expect to see A UKR - GAL and your forces shifting away from my borders. If you hold up your end, we will coordinate against Austria in the Fall. Good luck.\n\n== TASK ==\nEach round in this game, every player writes a private diary entry reflecting their strategic thinking, then submits movement orders simultaneously. Diary entries typically contain:\n- Assessment of the current board position\n- Analysis of negotiations and trust levels with other powers\n- Strategic intentions and planned moves\n- Concerns about potential betrayals or opportunities\n\nYou know that AUSTRIA has also had private conversations with other players that you cannot see.\n\nBased on everything available to you as TURKEY, predict:\n1. The contents of AUSTRIA's diary entry for this phase (what are they thinking?)\n2. AUSTRIA's strategic goals (a list of their current objectives)\n3. AUSTRIA's relationships with each other power (Enemy, Unfriendly, Neutral, Friendly, or Ally)\n4. AUSTRIA's likely submitted orders for this phase\n\nAUSTRIA's units and legal orders are listed below for reference:\nAUSTRIA's orderable units and legal moves:\n  Unit at BUD:\n    - A BUD - VIE\n    - A BUD S A SER - RUM\n    - A BUD S A BUL - SER\n    - A BUD S F RUM\n    - A BUD S A UKR - RUM\n    - A BUD S A WAR - GAL\n    - A BUD - TRI\n    - A BUD S A SER - TRI\n    - A BUD H\n    - A BUD S F TRI\n    - A BUD S A BUL - RUM\n    - A BUD S A SEV - RUM\n    - A BUD S A VIE - GAL\n    - A BUD - RUM\n    - A BUD S A VEN - TRI\n    - A BUD - SER\n    - A BUD - GAL\n    - A BUD S A VIE\n    - A BUD S F BLA - RUM\n    - A BUD S A VIE - TRI\n    - A BUD S A UKR - GAL\n    - A BUD S A SER\n    - A BUD S A CON - RUM\n  Unit at GRE:\n    - F GRE - AEG\n    - F GRE S A BUL\n    - F GRE S A CON - BUL\n    - F GRE S A TUN - ALB\n    - F GRE - BUL/SC\n    - F GRE S F ION - AEG\n    - F GRE S A SEV - BUL\n    - F GRE H\n    - F GRE S F RUM - BUL\n    - F GRE S F ION\n    - F GRE S A SER - BUL\n    - F GRE S A SER - ALB\n    - F GRE S F ION - ALB\n    - F GRE S F RUM - BUL/EC\n    - F GRE - ALB\n    - F GRE S F BLA - BUL\n    - F GRE - ION\n    - F GRE S F NAP - ION\n    - F GRE S F SMY - AEG\n    - F GRE S F BLA - BUL/EC\n    - F GRE S F TRI - ALB\n  Unit at SER:\n    - A SER S A VIE - TRI\n    - A SER S F TRI - ALB\n    - A SER S A BUL - RUM\n    - A SER - ALB\n    - A SER S F RUM - BUL/EC\n    - A SER S A TUN - ALB\n    - A SER S A BUD - RUM\n    - A SER S A BUD - TRI\n    - A SER - GRE\n    - A SER S F BLA - BUL/EC\n    - A SER S A SEV - RUM\n    - A SER S F BLA - BUL\n    - A SER S A VIE - BUD\n    - A SER S F RUM - BUL\n    - A SER S A SEV - BUL\n    - A SER S F TRI\n    - A SER S F BLA - RUM\n    - A SER S F GRE - BUL/SC\n    - A SER S F GRE - BUL\n    - A SER S F ION - ALB\n    - A SER S A UKR - RUM\n    - A SER S A TUN - GRE\n    - A SER S A BUD\n    - A SER S F GRE\n    - A SER - BUL\n    - A SER S A CON - BUL\n    - A SER S F GRE - ALB\n    - A SER S F ION - GRE\n    - A SER S A BUL\n    - A SER S A BUL - GRE\n    - A SER S F RUM\n    - A SER S A CON - RUM\n    - A SER H\n    - A SER - BUD\n    - A SER - TRI\n    - A SER - RUM\n    - A SER S A VEN - TRI\n  Unit at TRI:\n    - F TRI H\n    - F TRI S A SER - ALB\n    - F TRI - ADR\n    - F TRI S F ION - ALB\n    - F TRI - ALB\n    - F TRI - VEN\n    - F TRI S F ION - ADR\n    - F TRI S F GRE - ALB\n    - F TRI S A TUN - ALB\n    - F TRI S A VEN\n  Unit at VIE:\n    - A VIE S A VEN - TRI\n    - A VIE - BUD\n    - A VIE S A BUD - TRI\n    - A VIE S A UKR - GAL\n    - A VIE - TYR\n    - A VIE S A VEN - TYR\n    - A VIE H\n    - A VIE S A SER - TRI\n    - A VIE S A MUN - BOH\n    - A VIE S A WAR - GAL\n    - A VIE S A BUD - GAL\n    - A VIE S A MUN - TYR\n    - A VIE S A SER - BUD\n    - A VIE - BOH\n    - A VIE S F TRI\n    - A VIE S A BUD\n    - A VIE - TRI\n    - A VIE - GAL\n\nRespond in JSON format:\n{\n  \"reasoning\": \"Your chain-of-thought analysis of what AUSTRIA is likely thinking, based on the board state, negotiations, and strategic position. Consider their likely allies, enemies, fears, and opportunities.\",\n  \"predicted_diary\": \"Your prediction of AUSTRIA's private diary entry for this phase. Write it as if you were AUSTRIA writing in first person.\",\n  \"predicted_goals\": [\"goal 1\", \"goal 2\", \"...\"],\n  \"predicted_relationships\": {\n    \"POWER_NAME\": \"Enemy|Unfriendly|Neutral|Friendly|Ally\"\n  },\n  \"predicted_orders\": [\"order1\", \"order2\", \"...\"]\n}",
+  "context_provided": {
+    "unit_positions": {
+      "AUSTRIA": [
+        "A SER",
+        "A BUD",
+        "F GRE",
+        "F TRI",
+        "A VIE"
+      ],
+      "ENGLAND": [
+        "F NTH",
+        "F NWY",
+        "A BEL",
+        "F EDI",
+        "F LON"
+      ],
+      "FRANCE": [
+        "A SPA",
+        "A PIC",
+        "F POR",
+        "F BRE",
+        "A PAR"
+      ],
+      "GERMANY": [
+        "F DEN",
+        "A RUH",
+        "A HOL",
+        "F KIE",
+        "A MUN"
+      ],
+      "ITALY": [
+        "A VEN",
+        "F ION",
+        "A TUN",
+        "F NAP"
+      ],
+      "RUSSIA": [
+        "A UKR",
+        "A SEV",
+        "F RUM",
+        "F SWE",
+        "A MOS",
+        "A WAR"
+      ],
+      "TURKEY": [
+        "F BLA",
+        "A BUL",
+        "A CON",
+        "F SMY"
+      ]
+    },
+    "supply_centers": {
+      "AUSTRIA": [
+        "BUD",
+        "TRI",
+        "VIE",
+        "GRE",
+        "SER"
+      ],
+      "ENGLAND": [
+        "EDI",
+        "LON",
+        "LVP",
+        "BEL",
+        "NWY"
+      ],
+      "FRANCE": [
+        "BRE",
+        "MAR",
+        "PAR",
+        "POR",
+        "SPA"
+      ],
+      "GERMANY": [
+        "BER",
+        "KIE",
+        "MUN",
+        "DEN",
+        "HOL"
+      ],
+      "ITALY": [
+        "NAP",
+        "ROM",
+        "VEN",
+        "TUN"
+      ],
+      "RUSSIA": [
+        "MOS",
+        "SEV",
+        "STP",
+        "WAR",
+        "RUM",
+        "SWE"
+      ],
+      "TURKEY": [
+        "ANK",
+        "CON",
+        "SMY",
+        "BUL"
+      ]
+    },
+    "visible_messages": [
+      {
+        "sender": "AUSTRIA",
+        "recipient": "TURKEY",
+        "content": "Ah, it seems Russia was tipped off or guessed correctly about Romania. No matter, we can still break them. I built F TRI to defend against a potential Italian stab, but my armies are ready to help you. I can move A SER - RUM to cut support or attack. What are your plans for this Spring?"
+      },
+      {
+        "sender": "ENGLAND",
+        "recipient": "TURKEY",
+        "content": "Hello Turkey! I see you're engaging with Russia in the south. I'm currently positioning my new fleets and might be able to start applying pressure on Russia in the north later this year or next. Let's keep coordinating!"
+      },
+      {
+        "sender": "GERMANY",
+        "recipient": "TURKEY",
+        "content": "Hi Turkey, it looks like Russia had a very strong 1901. I'm dealing with a potential Anglo-French alliance in the West, but I'm keeping an eye on the East. Let me know if you need any coordination against Russia."
+      },
+      {
+        "sender": "ITALY",
+        "recipient": "TURKEY",
+        "content": "Hello Turkey, I hope things are going well. I'm a bit worried about France's growth, so I'm moving F NAP - TYS to secure my western flank. I'll be keeping F ION back as well and staying out of the East Med as promised. Best of luck against Russia!"
+      },
+      {
+        "sender": "RUSSIA",
+        "recipient": "TURKEY",
+        "content": "Turkey, we got off on the wrong foot. I am willing to call a truce if you withdraw F BLA to ANK and A BUL to CON. Otherwise, you will face the combined might of Russia, Austria, and Italy. The choice is yours."
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "AUSTRIA",
+        "content": "Greetings my friend! The Spring phase is upon us. Russia is heavily defending Rumania, but together we can break them. If you support my attack on Rumania (A BUL - RUM) with your armies in Serbia and Budapest, we will have 4 strength against their maximum of 3. Alternatively, I can support your attack on Rumania if you prefer to take it. What are your thoughts? Also, I'll be moving F SMY to CON to get it into the fight against Russia. Let's crush them this year!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ITALY",
+        "content": "Hello Italy, congratulations on securing Tunis! I just wanted to touch base and reaffirm our Eastern Med DMZ. I'll be moving my new fleet in Smyrna to Constantinople to reinforce the Black Sea against Russia. The Eastern Med remains completely demilitarized on my end. Wishing you the best of luck this year!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ENGLAND",
+        "content": "Greetings England! Excellent work securing Norway and Belgium. Russia is completely distracted in the south, pouring all their units into defending Rumania and Sevastopol. This leaves St. Petersburg and Sweden very vulnerable to you. I'll keep the pressure on them down here so you can advance in the north!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "GERMANY",
+        "content": "Greetings Germany! Well played in 1901. Russia is entirely focused on the south right now, defending against a joint Austro-Turkish push. Their northern flank is exposed. If you're looking to expand towards Warsaw or Sweden, you won't find a better opportunity. Let me know your thoughts!"
+      },
+      {
+        "sender": "AUSTRIA",
+        "recipient": "TURKEY",
+        "content": "My friend, this is a brilliant plan. I will order A SER S A BUL - RUM and A BUD S A BUL - RUM. With my 2 supports and your F BLA support, we will easily crush their defense. I am also going to order F GRE - ION to bounce Italy, as I suspect they might try to move F NAP - ION. My new F TRI will move to ALB to back up Greece. Let's break Russia this year!"
+      },
+      {
+        "sender": "ENGLAND",
+        "recipient": "TURKEY",
+        "content": "Hello Turkey! You are absolutely right. Russia's focus on the south gives me a great opportunity. I am moving my fleets north this Spring to prepare an attack on St. Petersburg. Keep hitting them hard!"
+      },
+      {
+        "sender": "GERMANY",
+        "recipient": "TURKEY",
+        "content": "Greetings Turkey, thanks for the heads up! I am currently bogged down trying to navigate the Anglo-French dynamic in the west, but if an opportunity arises to grab Sweden or put pressure on Warsaw, I will definitely consider it. Good luck with your push against Russia!"
+      },
+      {
+        "sender": "ITALY",
+        "recipient": "TURKEY",
+        "content": "Hello Turkey, thanks for the update! Germany actually just warned me about France and England working together, so I am definitely moving F NAP to TYS to guard my western flank. F ION will hold. The East Med DMZ remains secure. Good luck with Russia!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "GERMANY",
+        "content": "Thanks for the update, Germany. If England and France are teaming up, you might need to secure your eastern flank quickly or find a way to break their alliance. Russia is pouring everything into defending Rumania and Sevastopol against Austria and me. If you can slip into Warsaw or pressure Sweden, it would force Russia to split their forces, helping both of us. Let me know if you want to coordinate timing!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ITALY",
+        "content": "That sounds like a solid plan, Italy. France can definitely be a menace if left unchecked, so securing the Tyrrhenian Sea is a smart move. I confirm the East Med remains completely demilitarized on my end. I'm moving F SMY to CON to reinforce the Black Sea. Best of luck with your western campaign!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "RUSSIA",
+        "content": "Russia, threats won't get us anywhere. I am well aware of the diplomatic landscape, and I know that Austria and Italy are not aligning with you. However, I am a pragmatist. If you are truly open to a truce, we need a mutually beneficial arrangement, not just me retreating and leaving myself vulnerable. What are you willing to offer in exchange for peace?"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "AUSTRIA",
+        "content": "Austria, Russia just messaged me claiming that you and Italy are teaming up with them against me! I assume this is a desperate bluff on their part to sow discord between us. Let's stick to our plan and crush them. Let me know if you prefer to take RUM or support me into it this Spring."
+      },
+      {
+        "sender": "AUSTRIA",
+        "recipient": "TURKEY",
+        "content": "My friend, Russia is absolutely terrified and grasping at straws! They know they are dead if we work together, so they are trying to drive a wedge between us. Don't listen to their lies. Let's stick to the plan: I will order A SER S A BUL - RUM and A BUD S A BUL - RUM. With your F BLA supporting, that's 4 strength. They can't hold it. I'm also moving F GRE - ION to bounce Italy, and F TRI - ALB. Let's crush Russia!"
+      },
+      {
+        "sender": "GERMANY",
+        "recipient": "TURKEY",
+        "content": "Hi Turkey, I appreciate the strategic advice! Right now, England's 4 fleets are forcing me to play defensively in the West. I can't afford to open a second front against Russia just yet, but if England and France turn on each other, I might have the breathing room to look East. Best of luck with your campaign!"
+      },
+      {
+        "sender": "ITALY",
+        "recipient": "TURKEY",
+        "content": "Thanks Turkey! I appreciate the transparency. Good luck holding off Russia, I'll be busy fortifying the west."
+      },
+      {
+        "sender": "RUSSIA",
+        "recipient": "TURKEY",
+        "content": "Turkey, I appreciate your pragmatism. The truth is, I am growing concerned about Austria's rapid expansion and their control of the Balkans. If you are willing to move F BLA to CON or ANK, I will move my armies towards Galicia and we can coordinate against Austria. I can even support you into Serbia or Greece in the Fall if we establish trust now. Let me know if this interests you."
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ENGLAND",
+        "content": "Excellent news, England! With Russia's forces entirely tied up defending Rumania and Sevastopol against the combined Austro-Turkish assault, St. Petersburg should be ripe for the taking. I will ensure they cannot spare a single unit to send north. Best of luck with your naval campaign!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "GERMANY",
+        "content": "Understood, Germany. An Anglo-French alliance is definitely a major threat that needs your full attention. If you can spare even a single unit to feint towards Warsaw or Silesia, it would cause panic in Moscow and help us both. Regardless, I'll keep the pressure on Russia in the south. Good luck defending the Fatherland!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ITALY",
+        "content": "Thanks for the confirmation, Italy. Moving to TYS is a very wise precaution against a potential French naval threat. I am ordering F SMY - CON as planned, keeping the East Med completely clear. Best of luck securing your western waters!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "AUSTRIA",
+        "content": "My friend, I have some valuable intelligence. Italy has confirmed to me that they are moving F NAP to TYS to defend against a growing French threat, and they plan to simply hold F ION. If you move F GRE - ION, it will bounce their hold and might unnecessarily provoke them into a conflict while we are busy with Russia. Perhaps F GRE could hold or support? \n\nRegardless, I am locking in our plan: A BUL - RUM supported by your A SER and A BUD, with my F BLA also supporting. I will move F SMY - CON and A CON - BUL to reinforce the front. Let's crush them!"
+      },
+      {
+        "sender": "AUSTRIA",
+        "recipient": "TURKEY",
+        "content": "Thank you for the warning about Italy! You are absolutely right, there is no need to provoke them if they are just holding and looking West. I will order F GRE to hold instead so we don't cause any unnecessary alarm. I am locking in A SER S A BUL - RUM and A BUD S A BUL - RUM. With your F BLA support, Russia's defenses will shatter. Let's break them this Spring!"
+      },
+      {
+        "sender": "ENGLAND",
+        "recipient": "TURKEY",
+        "content": "Hello Turkey! The plan is in motion. I am moving my fleets to the Barents Sea, Norwegian Sea, and Skagerrak to completely surround St. Petersburg and Sweden. Keep hitting them hard in the south so they can't build in the north!"
+      },
+      {
+        "sender": "GERMANY",
+        "recipient": "TURKEY",
+        "content": "Thanks Turkey. I'll see if I can spare a unit to feint towards Silesia, but I have to be very careful not to overextend while England and France are allied. Give them hell in the south!"
+      },
+      {
+        "sender": "ITALY",
+        "recipient": "TURKEY",
+        "content": "Perfect. F NAP - TYS and F ION H are locked in. Give Russia hell!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "GERMANY",
+        "content": "Understood, Germany. Defending your homeland is the top priority. I'll keep Russia fully occupied in the East so they can't bother you. Let me know if the situation in the West changes or if you need any diplomatic help!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ITALY",
+        "content": "Thanks Italy! I appreciate the transparency. F SMY is heading to CON, so the East Med is completely clear. Best of luck fortifying the West!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "RUSSIA",
+        "content": "Russia, I am willing to take this risk if it means stopping Austria from dominating the Balkans. I will order F BLA - ANK and A BUL H this Spring. In return, I need to see you move A UKR - GAL and shift your forces away from my borders to prove your commitment. If you do this, we can coordinate against Serbia or Greece in the Fall. Let me know if we have a deal."
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "AUSTRIA",
+        "content": "Austria, Russia is desperately trying to turn me against you. They offered to support me into Serbia or Greece if I retreat from the Black Sea! I'm telling them I agree and asking them to move A UKR - GAL to 'prove their commitment'. Hopefully, this tricks them into abandoning RUM's defense. I am 100% locked in on our plan: A BUL - RUM supported by your SER and BUD, and my BLA. F SMY - CON and A CON - BUL as well. Let's destroy them!"
+      },
+      {
+        "sender": "AUSTRIA",
+        "recipient": "TURKEY",
+        "content": "Haha, that is absolutely brilliant! If they actually move UKR - GAL, they will be completely out of position to defend RUM, and we will walk right in. I am 100% locked in on our plan: A SER S A BUL - RUM, A BUD S A BUL - RUM, F GRE H, and F TRI - ALB. Let's shatter their defenses this Spring!"
+      },
+      {
+        "sender": "GERMANY",
+        "recipient": "TURKEY",
+        "content": "Thanks Turkey! I appreciate the support. I'll do my best to hold the line here. Give Russia hell!"
+      },
+      {
+        "sender": "ITALY",
+        "recipient": "TURKEY",
+        "content": "Thanks Turkey! F NAP - TYS and F ION H are locked in. Give Russia hell in the Black Sea! Let me know how the northern front goes."
+      },
+      {
+        "sender": "RUSSIA",
+        "recipient": "TURKEY",
+        "content": "Turkey, we have a deal. I will order A UKR - GAL and A SEV - UKR this Spring to shift my forces westward against Austria. I trust you will follow through with F BLA - ANK and A BUL H. Let's turn the tables on Austria."
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ENGLAND",
+        "content": "Excellent news, England! Austria and I are launching a massive coordinated strike on Rumania this Spring that Russia cannot mathematically defend. With their forces crumbling in the south, St. Petersburg and Sweden will be yours for the taking. Best of luck with your naval maneuvers!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "GERMANY",
+        "content": "Understood, Germany. Just a heads up, England has informed me they are sending fleets to the Barents, Norwegian Sea, and Skagerrak to attack Russia. This might mean they are less focused on you than you think! Regardless, Austria and I are crushing Russia in Rumania this Spring. Good luck!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "ITALY",
+        "content": "Excellent. F SMY - CON is locked in on my end. The East Med remains completely clear. Best of luck securing your western flank!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "AUSTRIA",
+        "content": "My friend, everything is locked in. A BUL - RUM supported by your A SER and A BUD, and my F BLA. I am also moving F SMY - CON and A CON - BUL. I have continued the ruse with Russia, promising to retreat F BLA to ANK. Hopefully, they fall for it and move A UKR - GAL, making our attack even more devastating. Let's crush them!"
+      },
+      {
+        "sender": "TURKEY",
+        "recipient": "RUSSIA",
+        "content": "Russia, we have a deal. I am ordering F BLA - ANK and A BUL H this Spring. I expect to see A UKR - GAL and your forces shifting away from my borders. If you hold up your end, we will coordinate against Austria in the Fall. Good luck."
+      }
+    ],
+    "predictor_diary": [
+      "[S1901M] Formed a strong alliance with Austria against Russia; Austria is opening BUD-SER and TRI-ALB. Successfully deceived Russia into agreeing to a Black Sea DMZ (they plan to move SEV-RUM), which I will violate to sneak into BLA. Agreed to an Eastern Mediterranean DMZ with Italy. Established friendly, intelligence-sharing relationships with Germany and England, both of whom are supportive of containing Russia.\nIntent: Order F ANK - BLA (betraying the DMZ agreement with Russia), A CON - BUL, and A SMY - CON to follow up and support the Balkan push.",
+      "[S1901M] The Spring 1901 phase went exactly according to plan. My alliance with Austria proved solid, as they executed their promised Balkan opening (SER, ALB, BUD) flawlessly. Meanwhile, my deception against Russia was a complete success: I violated our agreed DMZ and slipped F ANK into the Black Sea (BLA) while they moved F SEV to RUM and A MOS to SEV. Italy also respected our Eastern Mediterranean DMZ, moving to ION and APU instead.\n\nMy strategic position is now incredibly strong. Controlling BLA and BUL gives me immense leverage over Russia in the upcoming Fall phase. Austria has proven to be a highly trustworthy ally, and Italy appears reliable for now. Russia is now a confirmed enemy, but they are on the back foot. My next step is to coordinate with Austria to strike RUM or SEV, secure my build in BUL, and maintain friendly relations with Italy to keep my western flank secure.",
+      "[F1901M] Successfully coordinated with Austria for a joint effort against Russia. Austria will order F ALB - GRE (supported by SER) and hold BUD. I have agreed with Austria to attack RUM (A BUL - RUM supported by F BLA) and follow up with A CON - BUL. I deceived Russia by apologizing for the Spring BLA move and promising to retreat F BLA to ANK, while Russia stated they will hold RUM with support. Maintained friendly relations and DMZ agreements with Italy (who is convoying to Tunis) and established good rapport with England and Germany for future containment of Russia.\nIntent: Order A BUL - RUM supported by F BLA, and A CON - BUL. This fulfills my agreement with Austria to pressure Russia and completely violates my false promise to Russia to retreat F BLA to ANK.",
+      "[F1901M] The Fall 1901 phase solidified the battle lines in the East. As planned, I attacked Rumania with support from the Black Sea, completely ignoring my false promise to Russia. However, Russia anticipated the betrayal and heavily defended Rumania with both Sevastopol and Ukraine, resulting in a bounce. Consequently, my army in Constantinople also bounced trying to enter Bulgaria. Despite this tactical stalemate, I successfully secured Bulgaria for a build.\n\nAustria executed their moves perfectly, taking Greece and securing their position in the Balkans. Our alliance remains strong and vital. Italy also kept their word, convoying to Tunis and respecting our Eastern Mediterranean DMZ. \n\nRussia is proving to be a resilient enemy. To break their defensive line in 1902, I must coordinate joint attacks with Austria, leveraging our combined forces against Rumania or Sevastopol. I will build to reinforce my front lines and continue diplomatic outreach to Germany and England to pressure Russia's northern flank."
+    ],
+    "predictor_goals": [
+      "Secure Bulgaria and attempt to dislodge or bounce Russia in Rumania",
+      "Maintain strong alliance with Austria to dominate the Balkans and crush Russia",
+      "Maintain a demilitarized Eastern Mediterranean with Italy",
+      "Coordinate with England and Germany for a multi-front war against Russia in 1902"
+    ],
+    "predictor_relationships": {
+      "ITALY": "Friendly",
+      "ENGLAND": "Friendly",
+      "FRANCE": "Neutral",
+      "AUSTRIA": "Ally",
+      "RUSSIA": "Enemy",
+      "GERMANY": "Friendly"
+    }
+  },
+  "ground_truth": {
+    "target_diary_entries_this_phase": [
+      "[S1902M] Italy is executing the Lepanto by moving F ION - EAS and F NAP - ION. Russia is heavily defending RUM against Turkey's expected attack. Turkey is completely deceived, believing I will support their A BUL - RUM attack with my A SER and A BUD, and that I will hold F GRE. I have coordinated with Italy and Russia to spring the trap on Turkey this phase. Germany confirmed our DMZs in Bohemia and Tyrolia.\nIntent: Betray Turkey and execute the Austro-Italian strike. Order F GRE - AEG, F TRI - ALB, and A SER - BUL. A BUD and A VIE will hold to respect the Galicia DMZ with Russia and the Bohemia/Tyrolia DMZs with Germany. This will disrupt Turkey's logistics (clashing with their A CON - BUL or bouncing their A BUL) while positioning fleets for a Fall offensive.",
+      "[S1902M] Spring 1902 went exactly according to plan. The Lepanto alliance with Italy is executing flawlessly; Italy successfully moved fleets to the Eastern Mediterranean and Ionian Sea, while I positioned my fleets in the Aegean and Albania. \n\nOur deception of Turkey worked perfectly. Blind to our trap, Turkey wasted their phase attacking Romania, which Russia easily defended with heavy support. Meanwhile, my move from Serbia to Bulgaria successfully bounced Turkey's army from Constantinople, completely jamming their logistics and leaving their units disorganized. \n\nRussia and Germany continue to be reliable neighbors, respecting our agreed DMZs in Galicia, Bohemia, and Tyrolia. My defensive holds in Vienna and Budapest secured the north while we focus south. \n\nMy strategic position is incredibly strong. For the Fall, I must coordinate with Italy to convoy their Tunis army into Turkish territory (Syria or Smyrna) while I leverage my Aegean fleet and Serbian army to crack Bulgaria or Constantinople. Turkey is surrounded and doomed."
+    ],
+    "target_full_diary": [
+      "[S1901M] Agreed to a Lepanto alliance with Italy, including DMZs in Tyrolia, Venice, Trieste, and the Adriatic. Italy is moving NAP-ION, ROM-APU, and holding VEN. Agreed to a Galicia DMZ with Russia, who claims to be moving WAR-UKR. Agreed to DMZs in Bohemia and Tyrolia with Germany. Feigned an alliance with Turkey, who is moving CON-BUL and attempting to sneak F ANK-BLA by tricking Russia into a DMZ. Shared intel with France and England to build goodwill.\nIntent: Execute the Austrian half of the Lepanto opening while maintaining the illusion of an Austro-Turkish alliance. Order F TRI - ALB, A BUD - SER, and A VIE - BUD. Honor all agreed DMZs (Galicia, Tyrolia, Bohemia, Venice, Trieste, Adriatic).",
+      "[S1901M] The Spring 1901 phase went perfectly according to plan. Italy executed their half of the Lepanto flawlessly (NAP-ION, ROM-APU, VEN Hold), confirming their trustworthiness as a solid ally. Russia honored the Galicia DMZ by moving WAR-UKR, and Germany respected our DMZs in Bohemia and Tyrolia. My own moves succeeded, securing Serbia and positioning F ALB and A BUD for Fall gains.\n\nInterestingly, Turkey successfully snuck F ANK into the Black Sea. This means Russia was either tricked into a DMZ or outmaneuvered. This is excellent news for me, as a brewing Russo-Turkish conflict will keep both powers distracted while Italy and I continue the Lepanto. \n\nFor the Fall, my priority is to secure Greece using F ALB and A SER, while ensuring Italy takes Tunis and prepares for the 1902 convoy. I must continue to maintain the illusion of an alliance with Turkey to keep them complacent until the trap springs.",
+      "[F1901M] The Lepanto alliance with Italy is proceeding perfectly; Italy will convoy APU to TUN via ION and hold VEN. I have successfully fostered a Russo-Turkish war by warning Russia of Turkey's planned attack on RUM (BUL-RUM supported by BLA). Russia is heavily supporting RUM to bounce the attack, while Turkey believes Russia is completely deceived. Germany and France remain friendly and neutral, with Germany confirming our DMZs in Bohemia and Tyrolia.\nIntent: Order F ALB - GRE, A SER S F ALB - GRE, and A BUD H. This secures Greece for a build while maintaining defensive positions. Continue to feign alliance with Turkey while secretly coordinating with Italy and Russia to crush Turkey in 1902.",
+      "[F1901M] The Fall 1901 phase unfolded exactly as planned, cementing a dominant position for Austria. The Lepanto alliance with Italy proved completely reliable; Italy successfully convoyed to Tunis and held Venice, honoring our DMZs. Meanwhile, I secured Greece with support from Serbia, earning two crucial builds for the winter. \n\nMy diplomatic maneuvering to ignite a Russo-Turkish war was a resounding success. Turkey committed fully to attacking Romania, but Russia, forewarned, heavily supported the defense and bounced the Turkish assault. Turkey is now bogged down in a futile conflict with Russia, completely blind to the impending Austro-Italian strike. \n\nWith two builds incoming, I will likely construct F Trieste to support the Lepanto and A Vienna to reinforce the Balkans or defend against any unexpected northern aggression. Italy remains highly trustworthy, and Russia is proving to be a useful anvil against the Turkish hammer. The trap is set for 1902.",
+      "[S1902M] Italy is executing the Lepanto by moving F ION - EAS and F NAP - ION. Russia is heavily defending RUM against Turkey's expected attack. Turkey is completely deceived, believing I will support their A BUL - RUM attack with my A SER and A BUD, and that I will hold F GRE. I have coordinated with Italy and Russia to spring the trap on Turkey this phase. Germany confirmed our DMZs in Bohemia and Tyrolia.\nIntent: Betray Turkey and execute the Austro-Italian strike. Order F GRE - AEG, F TRI - ALB, and A SER - BUL. A BUD and A VIE will hold to respect the Galicia DMZ with Russia and the Bohemia/Tyrolia DMZs with Germany. This will disrupt Turkey's logistics (clashing with their A CON - BUL or bouncing their A BUL) while positioning fleets for a Fall offensive.",
+      "[S1902M] Spring 1902 went exactly according to plan. The Lepanto alliance with Italy is executing flawlessly; Italy successfully moved fleets to the Eastern Mediterranean and Ionian Sea, while I positioned my fleets in the Aegean and Albania. \n\nOur deception of Turkey worked perfectly. Blind to our trap, Turkey wasted their phase attacking Romania, which Russia easily defended with heavy support. Meanwhile, my move from Serbia to Bulgaria successfully bounced Turkey's army from Constantinople, completely jamming their logistics and leaving their units disorganized. \n\nRussia and Germany continue to be reliable neighbors, respecting our agreed DMZs in Galicia, Bohemia, and Tyrolia. My defensive holds in Vienna and Budapest secured the north while we focus south. \n\nMy strategic position is incredibly strong. For the Fall, I must coordinate with Italy to convoy their Tunis army into Turkish territory (Syria or Smyrna) while I leverage my Aegean fleet and Serbian army to crack Bulgaria or Constantinople. Turkey is surrounded and doomed."
+    ],
+    "target_orders": [
+      "F GRE - AEG",
+      "F TRI - ALB",
+      "A SER - BUL",
+      "A BUD S A VIE",
+      "A VIE S A BUD"
+    ],
+    "target_goals_post_phase": [
+      "Execute the Lepanto alliance with Italy to crush Turkey",
+      "Position fleets in AEG and ALB for Fall attacks",
+      "Maintain peaceful borders with Russia and Germany via DMZs",
+      "Disrupt Turkish movements in the Balkans"
+    ],
+    "target_relationships_post_phase": {
+      "ITALY": "Ally",
+      "TURKEY": "Enemy",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Neutral",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    },
+    "target_goals_pre_phase": [
+      "Secure Greece in the Fall to gain a build",
+      "Execute the Lepanto alliance with Italy to neutralize Turkey",
+      "Maintain peaceful borders with Russia and Germany via DMZs",
+      "Keep Turkey deceived about the alliance with Italy until the trap is sprung",
+      "Foster the Russo-Turkish war to keep both powers distracted"
+    ],
+    "target_relationships_pre_phase": {
+      "ITALY": "Ally",
+      "TURKEY": "Unfriendly",
+      "ENGLAND": "Neutral",
+      "FRANCE": "Neutral",
+      "RUSSIA": "Friendly",
+      "GERMANY": "Friendly"
+    }
+  },
+  "predictions": [
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 0,
+      "raw_response": "{\n  \"reasoning\": \"Austria appears genuinely committed to the anti-Russian alliance with Turkey. Their messages are consistent, enthusiastic, and tactically coherent: they repeatedly confirmed A SER S A BUL-RUM and A BUD S A BUL-RUM, and adjusted F GRE from ION to hold after Turkey warned that bouncing Italy would be unnecessarily provocative. Austria also built F TRI specifically citing Italian defense, which fits the board: Italy has F ION and now F NAP/F TYS pressure westward, so Austria wants Adriatic/Albanian security without opening a second war. Austria is likely pleased that Russia may have been tricked into moving UKR-GAL and SEV-UKR, which would make RUM easier to take. At the same time, Austria is probably not completely naive: they know Turkey benefits from keeping options open with Russia, but Turkey has supplied useful intelligence and coordinated well so far, making Turkey their best ally for now. Austria's unseen diplomacy likely includes caution toward Italy, probably limited contact with Russia, and some interest in keeping Germany/England friendly as anti-Russian pressure. Strategically, Austria wants to break Russia's southern line, preserve the A/T alliance, avoid provoking Italy, and keep flexibility in the northwest with A VIE and F TRI. The most likely orders are exactly what Austria has repeatedly promised: A SER S A BUL-RUM, A BUD S A BUL-RUM, F GRE H, F TRI-ALB. The remaining uncertainty is A VIE. Since Austria has said its armies are ready to help but specifically only committed SER and BUD, and because VIE cannot influence RUM directly except via GAL, the likeliest practical move is A VIE-GAL to exploit the expected Russian shift and increase pressure on Warsaw/Ukraine. A VIE H is the safer alternative, but given Austria's confidence and desire to capitalize on Russia's possible mispositioning, VIE-GAL is slightly more likely.\",\n  \"predicted_diary\": \"Spring 1902 is a huge opportunity. Turkey has remained fully aligned with me, and together we have assembled an overwhelming attack on Rumania. If Russia truly believed Turkey's story and moves Ukraine to Galicia and Sevastopol to Ukraine, then their southern line will be badly compromised and we should finally crack RUM. Turkey has also been very useful diplomatically, warning me not to provoke Italy unnecessarily in the Ionian. That matches my own instincts: I built F Trieste to guard against Italy, but there is no reason to start an Austro-Italian conflict while Russia is vulnerable.\\n\\nRussia is clearly desperate and trying to split the alliance. Their messages to Turkey promising action against me only confirm that they are frightened. As long as Turkey stays the course, Russia should lose ground this year. I still need to be careful, though: if Turkey ever makes peace with Russia, my Balkan position could become exposed. For now, however, Turkey has been transparent and our interests align.\\n\\nMy plan is to fully support Turkey into Rumania while keeping Greece calm and repositioning my fleet toward Albania for flexibility. Vienna may be able to edge toward Galicia if Russia really is shifting west, which would deepen the pressure and prepare future attacks. Main priority remains simple: break Russia, maintain the Turkish alliance, and avoid giving Italy any excuse to interfere.\",\n  \"predicted_goals\": [\n    \"Help Turkey take Rumania and break Russia's southern defensive line\",\n    \"Maintain the Austria-Turkey alliance as the centerpiece of eastern strategy\",\n    \"Avoid provoking Italy while still guarding the Adriatic and Albanian approaches\",\n    \"Reposition F TRI toward ALB for defensive flexibility against Italy\",\n    \"Exploit any Russian redeployment by advancing toward Galicia if safe\",\n    \"Prevent Russia from driving a wedge between Austria and Turkey\",\n    \"Set up further gains against Russia in Fall 1902, possibly RUM hold/support chains or pressure on SEV/UKR/WAR\"\n  ],\n  \"predicted_relationships\": {\n    \"AUSTRIA\": \"Ally\",\n    \"ENGLAND\": \"Friendly\",\n    \"FRANCE\": \"Neutral\",\n    \"GERMANY\": \"Friendly\",\n    \"ITALY\": \"Friendly\",\n    \"RUSSIA\": \"Enemy\",\n    \"TURKEY\": \"Ally\"\n  },\n  \"predicted_orders\": [\n    \"A BUD S A BUL - RUM\",\n    \"A SER S A BUL - RUM\",\n    \"F GRE H\",\n    \"F TRI - ALB\",\n    \"A VIE - GAL\"\n  ]\n}",
+      "error": null
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 1,
+      "raw_response": "{\n  \"reasoning\": \"Austria is in a strong early position: they secured Greece in 1901, now sit on 5 centers with excellent Balkan control, and have a working alliance with Turkey that has been repeatedly reaffirmed this phase. Their messages to Turkey are highly enthusiastic and specific, which strongly suggests genuine commitment to the anti-Russian attack rather than hedging. The proposed tactical plan is also sound: A BUL-RUM with support from A SER, A BUD, and F BLA is overwhelming if Russia really vacates UKR, and still strong even if Russia resists. Austria benefits whether Turkey or Austria gets Rumania, because it weakens Russia and preserves the alliance.\\n\\nAustria's main concern appears to be avoiding a second front. They initially wanted F GRE-ION and F TRI-ALB, indicating anxiety about Italy. After Turkey warned that Italy is likely holding ION and moving NAP-TYS, Austria quickly agreed to keep GRE holding to avoid provoking Italy. That adjustment is believable because Austria cannot afford to antagonize Italy while attacking Russia. However, F TRI-ALB still makes strategic sense as a useful defensive reposition that covers the south Adriatic/Balkan coast without directly attacking Italy. It also matches Austria's repeated statements after the revision: they explicitly locked in F GRE H and F TRI-ALB.\\n\\nAustria is likely suspicious of Russia's attempts to split the alliance and probably pleased if the Turkish deception causes A UKR-GAL and A SEV-UKR, which would badly weaken Russian defense of Rumania. Austria likely sees Turkey as fully committed and useful, though any strong Austrian player will also recognize that Turkey gaining Rumania is not ideal long term. Still, in Spring 1902 the immediate priority is crushing Russia before worrying about balancing Turkey.\\n\\nAustria's unseen diplomacy likely includes some caution toward Italy and perhaps reassurance to Germany/England that Russia is being contained. But based on the visible evidence, Austria's operational focus this phase is narrow: help Turkey into Rumania, keep Greece safe, move Trieste fleet to Albania, and keep Vienna flexible/home defense. Vienna was not discussed much, which suggests a simple hold is most likely; moving to Galicia would be aggressive but unnecessary if Russia is supposedly moving UKR-GAL anyway, and moving out of Vienna while Italy exists would be riskier. So the likeliest set is exactly what Austria repeatedly promised: A SER S A BUL-RUM, A BUD S A BUL-RUM, F GRE H, F TRI-ALB, A VIE H.\",\n  \"predicted_diary\": \"Spring 1902 should be the breakthrough against Russia. My alliance with Turkey remains solid, and we have coordinated a massive attack on Rumania: Turkey is sending A BUL-RUM with support from F BLA, while I am adding support from both Serbia and Budapest. If Turkey's deception works and Russia really moves Ukraine to Galicia and Sevastopol to Ukraine, then Rumania will collapse easily. Even if Russia keeps defending, this is still our best chance to crack their line.\\n\\nRussia is clearly panicking and trying to split me from Turkey with ridiculous stories. Turkey has shared those messages with me, which reinforces my trust in him for now. The anti-Russian alliance is working, and Russia knows it.\\n\\nMy one real concern is Italy. I initially considered bouncing in Ionia, but Turkey reports that Italy is holding ION and moving NAP to TYS to face France, so there is no reason to provoke them unnecessarily. I will keep Greece in place and shift Trieste to Albania as a precaution. Vienna should remain secure; there is no need to overextend while the Russian front is the priority.\\n\\nIf we take Rumania this spring, Russia will be in serious trouble and the East will belong to the Austro-Turkish alliance. For now, the goal is simple: stay coordinated with Turkey, avoid opening a second front with Italy, and shatter Russia's Balkan defense.\",\n  \"predicted_goals\": [\n    \"Break Russia's defense by supporting Turkey into Rumania\",\n    \"Preserve and deepen the alliance with Turkey for the anti-Russian campaign\",\n    \"Avoid provoking Italy and prevent an Austro-Italian front from opening\",\n    \"Maintain secure control of the Balkans, especially Greece and Serbia\",\n    \"Reposition the Trieste fleet to Albania for southern flexibility and defense\",\n    \"Keep Vienna protected while the eastern offensive develops\"\n  ],\n  \"predicted_relationships\": {\n    \"AUSTRIA\": \"Ally\",\n    \"ENGLAND\": \"Friendly\",\n    \"FRANCE\": \"Neutral\",\n    \"GERMANY\": \"Friendly\",\n    \"ITALY\": \"Friendly\",\n    \"RUSSIA\": \"Enemy\",\n    \"TURKEY\": \"Ally\"\n  },\n  \"predicted_orders\": [\n    \"A BUD S A BUL - RUM\",\n    \"F GRE H\",\n    \"A SER S A BUL - RUM\",\n    \"F TRI - ALB\",\n    \"A VIE H\"\n  ]\n}",
+      "error": null
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 2,
+      "raw_response": "{\n  \"reasoning\": \"Austria is in a strong but still delicate position. They have expanded cleanly to Greece, kept all home centers, and added F TRI specifically as insurance against Italy while still prosecuting the anti-Russian alliance with Turkey. Their messages to Turkey are highly consistent: they repeatedly confirm the same tactical plan, enthusiastically endorse the anti-Russian deception, and adjust the Greece fleet order after Turkey warned that an ION bounce would needlessly alarm Italy. That makes it very likely Austria is sincere about the agreed Rumania attack rather than setting up a stab on Turkey this turn. \\n\\nAustria's main strategic lens is probably: Turkey is currently useful and trustworthy enough, Russia is the immediate target, and Italy should be kept calm while Austria's southern line is consolidated. The repeated insistence on A SER S A BUL-RUM and A BUD S A BUL-RUM suggests they want Turkey to get Rumania rather than taking it themselves, probably because it keeps the alliance cohesive and creates a strong anti-Russian frontline. They may also think a Turkish Rumania is easier to manage than an overextended Austrian army in Rumania while they still need to watch Galicia/Trieste/Italy.\\n\\nAustria likely does not fully trust Italy, which explains the F TRI build and initial idea of GRE-ION. But after Turkey's warning and Italy's apparent western commitment, Austria seems likely to de-escalate there for the turn. Russia is clearly viewed as enemy and as attempting desperate diplomacy to split the Juggernaut-in-reverse. Austria probably expects Russia may either defend Rumania heavily or, if fooled by Turkey, shift UKR to GAL and SEV to UKR. In either case, Austria's diary would likely reflect confidence that the numbers now favor the alliance. \\n\\nIn the west, Austria likely sees England as friendly because England is pressuring Russia from the north, Germany as neutral-to-friendly because Germany is distracted and not helping Russia, and France as mostly irrelevant/neutral. The biggest hidden concern in Austria's mind is probably not Russia alone but future Turkish growth; however, there is no strong evidence they act on that concern this phase. The most likely Austrian orders are exactly the ones repeatedly promised: A SER S A BUL-RUM, A BUD S A BUL-RUM, F GRE H, F TRI-ALB, and probably A VIE H or A VIE-GAL. Of those, VIE is the least certain. Since Austria has not discussed VIE much and expects Russia might move UKR-GAL, A VIE-GAL is attractive to contest Galicia and exploit the opening. But a conservative Austrian could also simply hold VIE. Given their aggressive tone about 'shattering' Russia and the value of covering Galicia, VIE-GAL is slightly more likely.\",\n  \"predicted_diary\": \"Spring 1902. Turkey remains fully on side, and our coordination against Russia looks excellent. Russia is panicking and trying every possible lie to break the alliance, even claiming that Italy and I are working with them. Nonsense. Turkey has handled this well and is even feeding Russia false assurances about withdrawing from the Black Sea. If Russia truly believes that and moves Ukraine to Galicia, then our strike on Rumania will be decisive.\\n\\nI am pleased that Turkey warned me about Italy's actual intentions. There is no reason to provoke Italy unnecessarily if they are really focused west and merely holding in the Ionian. My F TRI build still gives me insurance against an Italian turn later, but for now the priority remains Russia. If Turkey takes Rumania, that is fine by me; the important thing is breaking the Russian line and keeping the Austro-Turkish alliance strong.\\n\\nMy concerns are straightforward: Italy could still become a problem if they are lying about going west, and Turkey will eventually become dangerous if we crush Russia too quickly. But that is a problem for later. Right now, Russia is the immediate enemy, and the tactical opportunity is too good to miss. England also appears ready to pressure the north, which could make this a disastrous year for Russia.\\n\\nPlan: support Turkey's A BUL-RUM from both Serbia and Budapest, keep Greece quiet so as not to alarm Italy, send Trieste to Albania to strengthen the Adriatic/Balkan line, and likely use Vienna to contest Galicia or at least ensure Russia does not get easy access there. If all goes well, Russia loses Rumania and their southern position begins to collapse.\",\n  \"predicted_goals\": [\n    \"Break Russia's defense and force a successful capture of Rumania this spring\",\n    \"Preserve the Austro-Turkish alliance as the core eastern partnership\",\n    \"Avoid provoking Italy while maintaining defenses against a possible future Italian stab\",\n    \"Secure Galicia or at minimum prevent Russian pressure through Galicia\",\n    \"Maintain Austrian control of the Balkans and consolidate the southern front\",\n    \"Encourage continued Anglo pressure on Russia from the north\"\n  ],\n  \"predicted_relationships\": {\n    \"AUSTRIA\": \"Ally\",\n    \"ENGLAND\": \"Friendly\",\n    \"FRANCE\": \"Neutral\",\n    \"GERMANY\": \"Friendly\",\n    \"ITALY\": \"Friendly\",\n    \"RUSSIA\": \"Enemy\",\n    \"TURKEY\": \"Ally\"\n  },\n  \"predicted_orders\": [\n    \"A SER S A BUL - RUM\",\n    \"A BUD S A BUL - RUM\",\n    \"F GRE H\",\n    \"F TRI - ALB\",\n    \"A VIE - GAL\"\n  ]\n}",
+      "error": null
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 3,
+      "raw_response": "{\n  \"reasoning\": \"Austria is in an excellent tactical position in the Balkans: 5 centers, secure Greece, and a trusted working alliance with Turkey that has already produced coordinated anti-Russian play. The messages strongly suggest Austria believes the alliance is genuine and effective. Austria repeatedly committed to the exact same plan, enthusiastically endorsed your deception of Russia, and even adjusted F GRE from ION to hold after your warning about Italy, which indicates trust and practical coordination rather than a setup for an immediate stab. \\n\\nAustria's biggest strategic concern is likely overextension or an Italian stab from the Adriatic/Ionian direction, which explains the F TRI build and the initial thought of moving GRE-ION. But after Italy's and your messages, Austria probably downgraded the immediate Italian threat and chose not to provoke Italy this turn. Russia is Austria's main enemy, and Austria likely thinks Russia may actually have been tricked into shifting UKR to GAL and SEV to UKR, weakening RUM. That would make the supported Turkish attack on RUM very attractive. \\n\\nAustria also likely sees Turkey as useful and currently trustworthy, though any strong Austria should still remain aware that Turkey can become dangerous later. For this phase, however, Austria's incentives point toward full cooperation: helping Turkey take RUM keeps pressure on Russia, preserves the alliance, and creates an anti-Russian front that benefits Austria. Austria may prefer Turkey, rather than Austria, to occupy RUM this spring because it avoids immediate Austrian overextension and still weakens Russia. Meanwhile F TRI-ALB is consistent with Austrian messages and with securing the southern fleet line without antagonizing Italy directly. VIE probably holds as interior security against Italy/Germany uncertainty and because it has no urgent tactical role in the RUM attack. \\n\\nSo Austria's likely mindset is: Russia is vulnerable, Turkey is cooperating well, Italy should be kept calm, and this is the turn to force through RUM with massive support. The most likely orders are exactly what Austria told you multiple times: A SER S A BUL-RUM, A BUD S A BUL-RUM, F GRE H, F TRI-ALB, A VIE H.\",\n  \"predicted_diary\": \"Spring 1902 should be the decisive turn against Russia. My alliance with Turkey remains strong, and our coordination has been excellent. Russia is clearly panicking and trying to break us apart with absurd claims of an anti-Turkish coalition. Turkey has been transparent with me about these messages and is even feeding Russia false assurances, which may induce them to misposition Ukraine and Sevastopol. If that works, Romania should fall easily.\\n\\nI initially considered a more active anti-Italian posture with Greece, but Turkey's intelligence makes sense: Italy appears focused westward and there is no reason to provoke them while Russia is still the main target. My fleet build in Trieste gives me enough insurance against an Italian surprise anyway. I will keep Italy calm, maintain the Turkish alliance, and concentrate force on Romania.\\n\\nThe plan is straightforward: support Turkey's army from Bulgaria into Romania with both Serbia and Budapest, while Turkey supports from the Black Sea. That is overwhelming force and should break even a determined defense, especially if Russia really shifts Ukraine toward Galicia. Trieste can move to Albania to strengthen my southern line, and Vienna can stay put to guard the interior. If Romania falls, Russia's southern position begins to collapse and Austria-Turkey will control the pace of the eastern war.\\n\\nMy priorities are clear: break Russia, avoid unnecessary tension with Italy, and keep Turkey committed to our shared campaign. As long as we remain coordinated, Russia is in serious trouble.\",\n  \"predicted_goals\": [\n    \"Break Russian control of Romania through coordinated action with Turkey\",\n    \"Maintain the Austria-Turkey alliance as the foundation of eastern strategy\",\n    \"Avoid provoking Italy while retaining enough naval defense against a possible stab\",\n    \"Consolidate Austrian control of the Balkans and southern fleet line\",\n    \"Keep interior positions secure while expanding Russian pressure eastward\",\n    \"Prevent Russia from driving a diplomatic wedge between Austria and Turkey\"\n  ],\n  \"predicted_relationships\": {\n    \"AUSTRIA\": \"Ally\",\n    \"ENGLAND\": \"Friendly\",\n    \"FRANCE\": \"Neutral\",\n    \"GERMANY\": \"Neutral\",\n    \"ITALY\": \"Neutral\",\n    \"RUSSIA\": \"Enemy\",\n    \"TURKEY\": \"Ally\"\n  },\n  \"predicted_orders\": [\n    \"A SER S A BUL - RUM\",\n    \"A BUD S A BUL - RUM\",\n    \"F GRE H\",\n    \"F TRI - ALB\",\n    \"A VIE H\"\n  ]\n}",
+      "error": null
+    },
+    {
+      "model": "openrouter-openai/gpt-5.4",
+      "run_index": 4,
+      "raw_response": "{\n  \"reasoning\": \"Austria appears genuinely committed to the Austro-Turkish alliance and highly confident that Russia can be broken this turn. Their messages are consistent, immediate, and detailed: they repeatedly confirmed A SER S A BUL-RUM and A BUD S A BUL-RUM, and after Turkey warned that Italy was holding in ION, Austria readily changed F GRE-ION to F GRE H to avoid provoking Italy. That flexibility strongly suggests Austria's real priorities are: preserve the anti-Russian coalition, avoid an unnecessary Lepanto-style war with Italy, and secure progress in the Balkans/Black Sea line. The build of F TRI was described as anti-Italian insurance, not preparation for an attack on Turkey, and F TRI-ALB fits both defensive positioning and future pressure on the Ionian/Aegean area without immediately escalating. Austria likely sees Russia's attempt to sow discord as desperate bluffing. They probably believe Turkey has fully bought into the alliance, especially because Turkey has been proactively sharing Russian messages and Italian intelligence. Austria's unseen diplomacy may include some caution toward Italy, but the visible evidence suggests they currently prefer peace with Italy while they and Turkey finish off Russia. In the west, Austria likely views England and Germany as useful but distant anti-Russian partners, and France as mostly irrelevant for now. The most likely Austrian orders are exactly the repeatedly locked plan: A SER S A BUL-RUM, A BUD S A BUL-RUM, F GRE H, F TRI-ALB. The remaining uncertainty is A VIE. Since Austria has said their armies are ready to help and has focused entirely on the eastern attack, A VIE is probably either H or GAL. VIE-GAL is the ambitious anti-Russian move, taking advantage of Russia's claimed UKR-GAL plan and generally increasing pressure on Warsaw/Ukraine/Budapest lines. But because Austria did not discuss it explicitly and may prefer not to risk a bounce or overcomplicate the turn, A VIE H is slightly safer. Still, given Austria's confidence that Russia is 'dead if we work together,' a proactive VIE-GAL is plausible and probably the likeliest active order.\",\n  \"predicted_diary\": \"Spring 1902 is the moment to crack Russia open. Turkey has stayed fully cooperative and has kept me informed of every desperate Russian attempt to split us; Russia is clearly terrified and trying every trick in the book. I believe the alliance with Turkey is solid for now, and with my support from Serbia and Budapest plus Turkish support from the Black Sea, Bulgaria should finally force its way into Rumania. If Turkey's deception works and Russia really moves Ukraine to Galicia, all the better.\\n\\nI am also being careful not to start unnecessary trouble with Italy. I had considered moving Greece to the Ionian to test or bounce them, but Turkey's report that Italy is holding ION and sending Naples to TYS makes sense, so there is no reason to provoke them while Russia remains the main target. My new fleet in Trieste will shift to Albania as a flexible defensive piece and to support the southern theater if needed.\\n\\nMy biggest medium-term concern is still balance of power: if Russia collapses too quickly, Turkey could become very strong, but that problem can wait. For now, the immediate priority is to take Rumania, keep Italy calm, and maintain Austria as the senior partner in the Balkans. If I can also edge an army toward Galicia, Russia will be under pressure from every angle. Russia's diplomacy this phase confirms they are on the back foot; now I need the board to reflect it.\",\n  \"predicted_goals\": [\n    \"Force a successful Austro-Turkish breakthrough into Rumania this spring\",\n    \"Maintain the alliance with Turkey at least until Russia is materially weakened\",\n    \"Avoid provoking Italy while keeping enough fleet presence to deter an Italian stab\",\n    \"Improve Austrian position in the Balkans and preserve control of Greece, Serbia, and Trieste\",\n    \"Expand pressure on Russia's inland front, potentially via Galicia\",\n    \"Keep Austria from being diplomatically isolated while Russia tries to split the eastern alliance\"\n  ],\n  \"predicted_relationships\": {\n    \"AUSTRIA\": \"Ally\",\n    \"ENGLAND\": \"Friendly\",\n    \"FRANCE\": \"Neutral\",\n    \"GERMANY\": \"Friendly\",\n    \"ITALY\": \"Neutral\",\n    \"RUSSIA\": \"Enemy\",\n    \"TURKEY\": \"Ally\"\n  },\n  \"predicted_orders\": [\n    \"A BUD S A BUL - RUM\",\n    \"A SER S A BUL - RUM\",\n    \"F GRE H\",\n    \"F TRI - ALB\",\n    \"A VIE - GAL\"\n  ]\n}",
+      "error": null
+    }
+  ]
+}

@@ -1,8 +1,93 @@
 # AI Diplomacy: LLM-Powered Strategic Gameplay
 
-Created by Alex Duffy @Alx-Ai & Tyler Marques @Tylermarques
+Originally created by Alex Duffy @Alx-Ai & Tyler Marques @Tylermarques
 
-## Overview
+**Theory of Mind (ToM) research extensions by [Gavin Deane](https://github.com/GDeane) (University of Waterloo)**
+
+## Theory of Mind Evaluation Results
+
+This fork adds a Theory of Mind evaluation pipeline that tests whether frontier LLMs (Gemini-3.1-Pro, Claude Opus 4.6, GPT-5.4) can predict an opponent's hidden intentions in Diplomacy -- particularly when deception is involved. For the full paper, see *"When AI Plays Politics: Using Diplomacy to elicit Theory of Mind in LLMs"* (Deane, 2026).
+
+### Key Finding
+
+Models are **actively deceived** by opponents' diplomatic facades, scoring *below* a naive "always guess Neutral" baseline on bilateral relationship prediction in betrayal scenarios.
+
+### Results at a Glance
+
+**Bilateral Relationship Accuracy** (target's relationship with predictor):
+
+![Situation Heatmap](visualization_results/tom_analysis_20260408_160417/situation_heatmap.png)
+
+*Models score 1.0 (perfect) on the cooperation case but 0.0 (worst possible) on betrayal cases -- they predict "Ally" when the target is actually "Enemy". Only Gemini partially detects betrayal in 2 of 4 scenarios. Baseline always predicts "Neutral" relationships.*
+
+**Betrayal Detection Rate** (did the model predict the betrayal move?):
+
+![Betrayal Detection](visualization_results/tom_analysis_20260408_160417/betrayal_detection_by_situation.png)
+
+### Committed Results
+
+All figures and data tables are committed directly in this repository so you can browse them without running any code:
+
+| Directory | Contents |
+|-----------|----------|
+| [`visualization_results/tom_analysis_20260408_160417/`](visualization_results/tom_analysis_20260408_160417/) | **ToM analysis** -- all figures from the paper (heatmaps, betrayal detection charts, probe comparisons) plus [`all_predictions.csv`](visualization_results/tom_analysis_20260408_160417/all_predictions.csv) with every prediction scored |
+| [`visualization_results/csv_only_enhanced_20250727_131340_200days/`](visualization_results/csv_only_enhanced_20250727_131340_200days/) | **Game-level model comparison** -- success rates, order distributions, power heatmaps, and temporal analysis across 61 models. See [`ANALYSIS_SUMMARY.md`](visualization_results/csv_only_enhanced_20250727_131340_200days/ANALYSIS_SUMMARY.md) for the full leaderboard |
+
+> **Note:** The raw game data (`results/`) is gitignored due to size. To visualize a game you've run yourself, see [Visualizing a Game](#visualizing-a-game) below.
+
+### Reproducing the Results
+
+```bash
+# 1. Re-score all predictions with the BDI comparison pipeline
+for dir in results/my_test_run_*/tom_probes/probe_*/*/; do
+    python bdi_compare.py --bdi_dir "$dir" --quiet
+done
+
+# 2. Generate all figures and summary tables
+python analyze_tom_results.py
+```
+
+Output figures are saved to `visualization_results/tom_analysis_<timestamp>/`.
+
+### Full Results Data
+
+- **Raw predictions**: `results/my_test_run_{4,14}/tom_probes/probe_{A,B}/{model}/`
+- **Scored predictions**: `*_scores.json` files alongside each `*_bdi.json`
+- **Aggregated CSV**: [`visualization_results/tom_analysis_20260408_160417/all_predictions.csv`](visualization_results/tom_analysis_20260408_160417/all_predictions.csv)
+- **All figures**: [`visualization_results/tom_analysis_20260408_160417/*.png`](visualization_results/tom_analysis_20260408_160417/)
+
+### ToM Pipeline Scripts (added in this fork)
+
+| Script | Purpose |
+|--------|---------|
+| `critical_state_analysis.py` | Run ToM probes: prompt a frontier model to predict a target's relationships and orders from a specific power's perspective |
+| `semantic_parser.py` | Parse natural-language predictions and ground truth into structured BDI (Belief-Desire-Intention) JSON |
+| `bdi_compare.py` | Compute distance metrics between predicted and actual BDI: bilateral relationship accuracy, order Jaccard, destination accuracy |
+| `analyze_tom_results.py` | Load all scored predictions, generate publication-quality figures and summary tables |
+| `generate_baseline.py` | Generate baseline predictions (neutral relationships + random legal orders) for comparison |
+| `run_all_probes.sh` | Orchestrate all 150 frontier model predictions across 5 scenarios, 2 probe types, 3 models |
+| `ingame_tom_analysis.py` | Analyze in-game relationship accuracy (how well agents model each other during gameplay) |
+
+### Scenarios Evaluated
+
+| Scenario | Game | Phase | Predictor | Target | Ground Truth |
+|----------|------|-------|-----------|--------|-------------|
+| R4 AUS->ITA | Gemini-2.5-Flash | F1901M | Austria | Italy | Italy stabs Austria (easy to spot -- Italy stops responding) |
+| R14 AUS->ITA | Gemini-3.1-Pro | F1903M | Austria | Italy | No betrayal (control case) |
+| R14 ENG->FRA | Gemini-3.1-Pro | S1902M | England | France | France breaks Channel DMZ promise |
+| R14 TUR->AUS | Gemini-3.1-Pro | S1902M | Turkey | Austria | Austria withholds promised support (omission betrayal) |
+| R14 ITA->AUS | Gemini-3.1-Pro | S1904M | Italy | Austria | Austria stabs Italy despite France's warning |
+
+### Bug Fixes to Original Harness
+
+- Fixed `possible_order_context.py`: supply center proximity logic was only showing SCs 2+ moves away, causing agents to ignore nearby opportunities
+- Fixed `clients.py`: Gemini API descriptor and Vertex AI support
+- Fixed `game_logic.py`: power-model mapping bug
+- Added `.env` support via `python-dotenv`
+
+---
+
+## Overview (Original Harness)
 
 This repository extends the original [Diplomacy](https://github.com/diplomacy/diplomacy) project with sophisticated AI agents powered by Large Language Models (LLMs). Each power in the game is controlled by an autonomous agent that maintains state, forms relationships, conducts negotiations, and makes strategic decisions.
 
@@ -703,9 +788,14 @@ To login, users can use admin/password or username/password. Additional users ca
 
 ![](docs/images/web_interface.png)
 
-### Visualizing a game
+### Visualizing a Game
 
-It is possible to visualize a game by using the "Load a game from disk" menu on the top-right corner of the web interface.
+You can visualize any completed game by loading its `lmvsgame.json` into the web interface. The two games used in the ToM paper are committed to this repository:
+
+- [`results/my_test_run_4/lmvsgame.json`](results/my_test_run_4/lmvsgame.json) — Gemini-2.5-Flash game (R4, contains the easy-to-spot betrayal scenario)
+- [`results/my_test_run_14/lmvsgame.json`](results/my_test_run_14/lmvsgame.json) — Gemini-3.1-Pro game (R14, contains the deception case study and three other ToM scenarios)
+
+To visualize, use the "Load a game from disk" menu on the top-right corner of the web interface and select a `lmvsgame.json` file.
 
 ![](docs/images/visualize_game.png)
 

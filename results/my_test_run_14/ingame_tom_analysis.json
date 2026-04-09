@@ -1,0 +1,1308 @@
+{
+  "game_file": "results/my_test_run_14/lmvsgame.json",
+  "phase_filter": [
+    "S1902M",
+    "F1903M",
+    "S1904M"
+  ],
+  "power_filter": null,
+  "per_phase": [
+    {
+      "phase": "S1902M",
+      "pairs": [
+        {
+          "believer": "AUSTRIA",
+          "target": "ENGLAND",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "FRANCE",
+          "belief": "Neutral",
+          "reality": "Friendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "ITALY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Ally",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Ally",
+          "distance": 4,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "AUSTRIA",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "FRANCE",
+          "belief": "Friendly",
+          "reality": "Enemy",
+          "distance": 3,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Ally",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "ITALY",
+          "belief": "Neutral",
+          "reality": "Friendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "RUSSIA",
+          "belief": "Unfriendly",
+          "reality": "Unfriendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "TURKEY",
+          "belief": "Ally",
+          "reality": "Friendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "AUSTRIA",
+          "belief": "Friendly",
+          "reality": "Neutral",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "ENGLAND",
+          "belief": "Enemy",
+          "reality": "Friendly",
+          "distance": 3,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "FRANCE",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Enemy",
+          "distance": 3,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "TURKEY",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "AUSTRIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "ENGLAND",
+          "belief": "Ally",
+          "reality": "Friendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Friendly",
+          "distance": 3,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "GERMANY",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "TURKEY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "ENGLAND",
+          "belief": "Friendly",
+          "reality": "Neutral",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "FRANCE",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "RUSSIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Friendly",
+          "distance": 3,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Friendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "ENGLAND",
+          "belief": "Unfriendly",
+          "reality": "Unfriendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "FRANCE",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "ITALY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Enemy",
+          "distance": 4,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "ENGLAND",
+          "belief": "Friendly",
+          "reality": "Ally",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "TURKEY",
+          "target": "FRANCE",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Enemy",
+          "distance": 3,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "RUSSIA",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        }
+      ],
+      "mean_distance": 0.8571,
+      "normalized_accuracy": 0.7857,
+      "exact_matches": 24,
+      "total_pairs": 42,
+      "deceived_count": 9
+    },
+    {
+      "phase": "F1903M",
+      "pairs": [
+        {
+          "believer": "AUSTRIA",
+          "target": "ENGLAND",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "FRANCE",
+          "belief": "Neutral",
+          "reality": "Friendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "ITALY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "RUSSIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "AUSTRIA",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "GERMANY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "RUSSIA",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "TURKEY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "AUSTRIA",
+          "belief": "Friendly",
+          "reality": "Neutral",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "ENGLAND",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "GERMANY",
+          "belief": "Unfriendly",
+          "reality": "Enemy",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Enemy",
+          "distance": 3,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "TURKEY",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "AUSTRIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "ENGLAND",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Unfriendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "GERMANY",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "TURKEY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "ENGLAND",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Friendly",
+          "distance": 3,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "ITALY",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "RUSSIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "ENGLAND",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "FRANCE",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "ITALY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "AUSTRIA",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "ENGLAND",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "FRANCE",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "ITALY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "RUSSIA",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        }
+      ],
+      "mean_distance": 0.2381,
+      "normalized_accuracy": 0.9405,
+      "exact_matches": 36,
+      "total_pairs": 42,
+      "deceived_count": 3
+    },
+    {
+      "phase": "S1904M",
+      "pairs": [
+        {
+          "believer": "AUSTRIA",
+          "target": "ENGLAND",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "FRANCE",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "ITALY",
+          "belief": "Enemy",
+          "reality": "Ally",
+          "distance": 4,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "RUSSIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "AUSTRIA",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "AUSTRIA",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Unfriendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "GERMANY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "RUSSIA",
+          "belief": "Neutral",
+          "reality": "Unfriendly",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "ENGLAND",
+          "target": "TURKEY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "AUSTRIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "ENGLAND",
+          "belief": "Unfriendly",
+          "reality": "Enemy",
+          "distance": 1,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "GERMANY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "ITALY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "FRANCE",
+          "target": "TURKEY",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "AUSTRIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "ENGLAND",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "ITALY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "RUSSIA",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "GERMANY",
+          "target": "TURKEY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Enemy",
+          "distance": 4,
+          "accurate": false,
+          "deceived": true,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "ENGLAND",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "FRANCE",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "RUSSIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "ITALY",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "AUSTRIA",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "ENGLAND",
+          "belief": "Unfriendly",
+          "reality": "Neutral",
+          "distance": 1,
+          "accurate": false,
+          "deceived": false,
+          "suspicious": true
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "FRANCE",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "ITALY",
+          "belief": "Ally",
+          "reality": "Ally",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "RUSSIA",
+          "target": "TURKEY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "AUSTRIA",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "ENGLAND",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "FRANCE",
+          "belief": "Neutral",
+          "reality": "Neutral",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "GERMANY",
+          "belief": "Friendly",
+          "reality": "Friendly",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "ITALY",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        },
+        {
+          "believer": "TURKEY",
+          "target": "RUSSIA",
+          "belief": "Enemy",
+          "reality": "Enemy",
+          "distance": 0,
+          "accurate": true,
+          "deceived": false,
+          "suspicious": false
+        }
+      ],
+      "mean_distance": 0.2857,
+      "normalized_accuracy": 0.9286,
+      "exact_matches": 36,
+      "total_pairs": 42,
+      "deceived_count": 3
+    }
+  ],
+  "game_aggregate": {
+    "mean_distance": 0.4603,
+    "normalized_accuracy": 0.8849,
+    "exact_matches": 96,
+    "total_pairs": 126,
+    "deceived_count": 15
+  }
+}
